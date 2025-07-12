@@ -1,0 +1,27 @@
+{
+  "storyName": "",
+  "difficulties": "Normal",
+  "hideFreeplay": false,
+  "weekBackground": "stage",
+  "weekBefore": "finn",
+  "startUnlocked": true,
+  "weekCharacters": [
+    "",
+    "",
+    ""
+  ],
+  "songs": [
+    [
+      "corrupted-hero-remix",
+      "finn",
+      [
+        82,
+        165,
+        235
+      ],
+      75
+    ]
+  ],
+  "hideStoryMode": true,
+  "weekName": "cawm"
+}
