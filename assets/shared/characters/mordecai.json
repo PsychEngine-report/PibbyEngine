@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				184,
+				-23
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Mordecai left"
+		},
+		{
+			"offsets": [
+				-86,
+				199
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Mordecai up"
+		},
+		{
+			"offsets": [
+				55,
+				-188
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Mordecai right"
+		},
+		{
+			"offsets": [
+				-84,
+				-122
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Mordecai Down"
+		},
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				76
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Mordecai idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/mordecai",
+	"position": [
+		150,
+		160
+	],
+	"healthicon": "mordecai",
+	"flip_x": false,
+	"healthbar_colors": [
+		0,
+		0,
+		60
+	],
+	"camera_position": [
+		-80,
+		-180
+	],
+	"sing_duration": 4,
+	"scale": 2
+}
