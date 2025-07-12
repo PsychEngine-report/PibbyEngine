@@ -1,0 +1,71 @@
+{
+	"song": {
+		"events": [
+			[
+				0,
+				[
+					[
+						"Cinematics (With HUD)",
+						"0.1",
+						"80"
+					]
+				]
+			],
+			[
+				100,
+				[
+					[
+						"Camera Switch",
+						"0.1",
+						"off"
+					]
+				]
+			],
+			[
+				12100,
+				[
+					[
+						"Camera Switch",
+						"0.1",
+						"on"
+					]
+				]
+			],
+			[
+				46808.3333333333,
+				[
+					[
+						"Camera Switch",
+						"0.1",
+						"off"
+					]
+				]
+			],
+			[
+				47225,
+				[
+					[
+						"Camera Switch",
+						"0.1",
+						"on"
+					],
+					[
+						"Change Character",
+						"gf",
+						"spinel"
+					]
+				]
+			],
+			[
+				70333.3333333333,
+				[
+					[
+						"Camera Switch",
+						"0.1",
+						"off"
+					]
+				]
+			]
+		]
+	}
+}
