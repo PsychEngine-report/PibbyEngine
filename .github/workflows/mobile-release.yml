@@ -6,7 +6,7 @@ permissions:
   discussions: write
 
 env:
-  PROJECT_NAME: PsychEngine
+  PROJECT_NAME: PibbyEngine
   REPO_PATH: Ethantobot11/PibbyEngine
 
 jobs:
