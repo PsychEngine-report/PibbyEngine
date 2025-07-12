@@ -1,0 +1,11 @@
+{
+	"idle_anim": "background idle",
+	"image": "background",
+	"position": [
+		100,
+		-65
+	],
+	"flipX": false,
+	"scale": 3.6,
+	"confirm_anim": "background idle"
+}
