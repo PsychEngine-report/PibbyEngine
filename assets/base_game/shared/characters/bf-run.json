@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				5,
+				-6
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "bf run left0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-51
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "bf run down0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-46,
+				27
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "bf run up0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-48,
+				-7
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "bf run right0",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": true,
+			"name": "bf run idle0"
+		}
+	],
+	"no_antialiasing": true,
+	"image": "characters/bf_run",
+	"position": [
+		-460,
+		120
+	],
+	"healthicon": "bf-minecraft",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		230,
+		-120
+	],
+	"sing_duration": 4,
+	"scale": 2
+}
