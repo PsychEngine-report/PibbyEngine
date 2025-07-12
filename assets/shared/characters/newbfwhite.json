@@ -1,0 +1,221 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				-5,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "BF idle dance",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-63,
+				-11
+			],
+			"anim": "singLEFTmiss",
+			"fps": 24,
+			"name": "MissL",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-30,
+				-50
+			],
+			"anim": "singDOWNmiss",
+			"fps": 24,
+			"name": "MissD",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-29,
+				77
+			],
+			"anim": "singUPmiss",
+			"fps": 24,
+			"name": "MissU",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-45,
+				-4
+			],
+			"anim": "singRIGHTmiss",
+			"fps": 24,
+			"name": "MissR",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-95,
+				-39
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down0"
+		},
+		{
+			"offsets": [
+				-12,
+				2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right0"
+		},
+		{
+			"offsets": [
+				113,
+				53
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up0"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-85,
+				-9
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "left0",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-40,
+				14
+			],
+			"anim": "reload",
+			"fps": 24,
+			"name": "BF reload",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				76,
+				106
+			],
+			"anim": "shootRIGHT",
+			"fps": 24,
+			"name": "Bf Shoot R",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				210,
+				110
+			],
+			"anim": "shootLEFT",
+			"fps": 24,
+			"name": "Bf Shoot L",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				73,
+				85
+			],
+			"anim": "shootUP",
+			"fps": 24,
+			"name": "Bf Shoot U",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				101,
+				-12
+			],
+			"anim": "shootDOWN",
+			"fps": 24,
+			"name": "Bf Shoot D",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-20,
+				-3
+			],
+			"anim": "dodgeRIGHT",
+			"fps": 24,
+			"name": "dodge right",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				70
+			],
+			"anim": "dodgeUP",
+			"fps": 24,
+			"name": "up dodge",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				80,
+				-17
+			],
+			"anim": "dodgeDOWN",
+			"fps": 24,
+			"name": "down dodge",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				90,
+				0
+			],
+			"anim": "dodgeLEFT",
+			"fps": 24,
+			"name": "left dodge",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/White-sprites/white_bf_Gun",
+	"position": [
+		180,
+		540
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		120,
+		-120
+	],
+	"sing_duration": 4,
+	"scale": 4
+}
