@@ -1,0 +1,41 @@
+{
+	"storyName": "",
+	"difficulties": "",
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"weekBefore": "tutorial",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"startUnlocked": true,
+	"hideStoryMode": false,
+	"songs": [
+		[
+			"come-along-with-me",
+			"icon-finn",
+			[
+				206,
+				80,
+				93
+			]
+		],
+		[
+			"come-along-with-mev",
+			"icon-finn",
+			[
+				226,
+				53,
+				40
+			]
+		]
+	],
+	"weekCharacters": [
+		"",
+		"bf",
+		""
+	],
+	"hiddenUntilUnlocked": false,
+	"weekName": "Custom Week"
+}
