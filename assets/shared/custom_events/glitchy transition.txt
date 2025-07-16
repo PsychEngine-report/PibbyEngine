@@ -1,0 +1,1 @@
+value1: the amount for the glitch effect
