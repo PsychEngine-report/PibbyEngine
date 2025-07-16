@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="banana joe.png">
+<SubTexture name="idle0000" x="111" y="219" width="114" height="214" frameX="-32" frameY="-8" frameWidth="160" frameHeight="234" />
+<SubTexture name="idle0001" x="111" y="219" width="114" height="214" frameX="-32" frameY="-8" frameWidth="160" frameHeight="234" />
+<SubTexture name="idle0002" x="317" y="0" width="109" height="215" frameX="-30" frameY="-7" frameWidth="160" frameHeight="234" />
+<SubTexture name="idle0003" x="317" y="0" width="109" height="215" frameX="-30" frameY="-7" frameWidth="160" frameHeight="234" />
+<SubTexture name="idle0004" x="104" y="0" width="104" height="217" frameX="-27" frameY="-8" frameWidth="160" frameHeight="234" />
+<SubTexture name="idle0005" x="104" y="0" width="104" height="217" frameX="-27" frameY="-8" frameWidth="160" frameHeight="234" />
+<SubTexture name="idle0006" x="0" y="0" width="104" height="219" frameX="-27" frameY="-8" frameWidth="160" frameHeight="234" />
+<SubTexture name="idle0007" x="0" y="0" width="104" height="219" frameX="-27" frameY="-8" frameWidth="160" frameHeight="234" />
+<SubTexture name="idle0008" x="209" y="0" width="108" height="216" frameX="-30" frameY="-8" frameWidth="160" frameHeight="234" />
+<SubTexture name="idle0009" x="209" y="0" width="108" height="216" frameX="-30" frameY="-8" frameWidth="160" frameHeight="234" />
+<SubTexture name="idle0010" x="426" y="0" width="110" height="215" frameX="-31" frameY="-8" frameWidth="160" frameHeight="234" />
+<SubTexture name="idle0011" x="426" y="0" width="110" height="215" frameX="-31" frameY="-8" frameWidth="160" frameHeight="234" />
+<SubTexture name="idle0012" x="0" y="219" width="111" height="214" frameX="-31" frameY="-8" frameWidth="160" frameHeight="234" />
+</TextureAtlas>
