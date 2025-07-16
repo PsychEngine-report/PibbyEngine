@@ -1,0 +1,32 @@
+{
+	"songs": [
+		[
+			"child's-play-awe",
+			"gumballfake",
+			[
+				46,
+				80,
+				235
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"difficulties": "",
+	"weekCharacters": [
+		"",
+		"bf",
+		""
+	],
+	"storyName": "child play",
+	"weekName": "childplay",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}
