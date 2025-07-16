@@ -1,0 +1,32 @@
+{
+	"storyName": "gumball",
+	"difficulties": "",
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"bf",
+		""
+	],
+	"songs": [
+		[
+			"my-finale",
+			"icon-gumball",
+			[
+				86,
+				73,
+				173
+			]
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "gumballweek",
+	"hiddenUntilUnlocked": false
+}
