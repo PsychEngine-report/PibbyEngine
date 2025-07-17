@@ -1,132 +1,132 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Idle"
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				316,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Left"
+			"fps": 24,
+			"name": "Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				277,
 				-1
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Down"
+			"fps": 24,
+			"name": "Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				39,
 				280
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Up"
+			"fps": 24,
+			"name": "Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				31,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Right"
+			"fps": 24,
+			"name": "Right",
+			"indices": []
 		},
 		{
-			"loop": true,
 			"offsets": [
 				45,
 				69
 			],
-			"anim": "hey",
+			"loop": true,
 			"fps": 24,
-			"name": "HEY Pose",
-			"indices": []
+			"anim": "hey",
+			"indices": [],
+			"name": "HEY Pose"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				166,
 				186
 			],
-			"anim": "cmon",
+			"loop": false,
 			"fps": 24,
-			"name": "Cmon",
-			"indices": []
+			"anim": "cmon",
+			"indices": [],
+			"name": "Cmon"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				282,
 				-38
 			],
-			"anim": "singDOWNmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "MissD",
-			"indices": []
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "MissD"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				57,
 				-2
 			],
-			"anim": "singRIGHTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "MissR",
-			"indices": []
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "MissR"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				56,
 				274
 			],
-			"anim": "singUPmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "MissU",
-			"indices": []
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "MissU"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				314,
 				108
 			],
-			"anim": "singLEFTmiss",
+			"loop": false,
 			"fps": 24,
-			"name": "MissL",
-			"indices": []
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "MissL"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/pibby",
 	"position": [
-		10,
-		340
+		160,
+		440
 	],
 	"healthicon": "pibby",
 	"flip_x": true,
@@ -136,9 +136,9 @@
 		221
 	],
 	"camera_position": [
-		140,
-		-20
+		290,
+		-120
 	],
 	"sing_duration": 5,
-	"scale": 1
+	"scale": 2
 }
