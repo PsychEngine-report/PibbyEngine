@@ -1,0 +1,11 @@
+{
+	"idle_anim": "Menu",
+	"image": "menu_gumball",
+	"position": [
+		900,
+		150
+	],
+	"flipX": false,
+	"scale": 0.9,
+	"confirm_anim": "Menu"
+}
