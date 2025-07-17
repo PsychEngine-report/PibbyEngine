@@ -1,65 +1,65 @@
 {
 	"animations": [
 		{
-			"offsets": [
-				-6,
-				-3
-			],
 			"loop": true,
-			"fps": 24,
+			"offsets": [
+				0,
+				0
+			],
 			"anim": "idle",
-			"indices": [],
-			"name": "Darwin Idle"
+			"fps": 24,
+			"name": "Darwin Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				83,
 				-5
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Darwin left"
+			"fps": 24,
+			"name": "Darwin left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-35,
 				-17
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Darwin right"
+			"fps": 24,
+			"name": "Darwin right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-14,
 				-67
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Darwin down"
+			"fps": 24,
+			"name": "Darwin down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-28,
-				76
+				74
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Darwin up"
+			"fps": 24,
+			"name": "Darwin up",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/darwin-noremote",
 	"position": [
-		150,
+		160,
 		510
 	],
 	"healthicon": "darwin",
@@ -71,7 +71,7 @@
 	],
 	"camera_position": [
 		210,
-		-130
+		-150
 	],
 	"sing_duration": 4,
 	"scale": 3
