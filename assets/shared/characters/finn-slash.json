@@ -103,8 +103,8 @@
 	"no_antialiasing": false,
 	"image": "characters/Finn-Slash",
 	"position": [
-		-210,
-		70
+		-200,
+		90
 	],
 	"healthicon": "finn",
 	"flip_x": false,
@@ -114,8 +114,8 @@
 		179
 	],
 	"camera_position": [
-		50,
-		-80
+		100,
+		-30
 	],
 	"sing_duration": 6.1,
 	"scale": 1.8
