@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="COME_ALONG_BF.png">
+<SubTexture name="Bf D Miss0000" x="0" y="970" width="282" height="319" frameX="0" frameY="-1" frameWidth="282" frameHeight="320" />
+<SubTexture name="Bf Down0000" x="1502" y="946" width="261" height="311" frameX="0" frameY="-7" frameWidth="261" frameHeight="318" />
+<SubTexture name="Bf Down0001" x="0" y="1290" width="261" height="311" frameX="0" frameY="-7" frameWidth="261" frameHeight="318" />
+<SubTexture name="Bf Down0002" x="1502" y="631" width="253" height="315" frameX="-5" frameY="-3" frameWidth="261" frameHeight="318" />
+<SubTexture name="Bf Idle0000" x="1502" y="0" width="261" height="315" frameX="0" frameY="-7" frameWidth="261" frameHeight="322" />
+<SubTexture name="Bf Idle0001" x="1502" y="315" width="261" height="315" frameX="0" frameY="-7" frameWidth="261" frameHeight="322" />
+<SubTexture name="Bf Idle0002" x="282" y="970" width="256" height="318" frameX="-3" frameY="-4" frameWidth="261" frameHeight="322" />
+<SubTexture name="Bf Idle0003" x="282" y="970" width="256" height="318" frameX="-3" frameY="-4" frameWidth="261" frameHeight="322" />
+<SubTexture name="Bf Idle0004" x="1249" y="0" width="253" height="321" frameX="-5" frameY="-2" frameWidth="261" frameHeight="322" />
+<SubTexture name="Bf Idle0005" x="1249" y="321" width="253" height="321" frameX="-5" frameY="-2" frameWidth="261" frameHeight="322" />
+<SubTexture name="Bf Idle0006" x="0" y="325" width="250" height="322" frameX="-6" frameY="0" frameWidth="261" frameHeight="322" />
+<SubTexture name="Bf Idle0007" x="250" y="325" width="250" height="322" frameX="-6" frameY="0" frameWidth="261" frameHeight="322" />
+<SubTexture name="Bf Idle0008" x="745" y="0" width="252" height="322" frameX="-6" frameY="0" frameWidth="261" frameHeight="322" />
+<SubTexture name="Bf Idle0009" x="745" y="322" width="252" height="322" frameX="-6" frameY="0" frameWidth="261" frameHeight="322" />
+<SubTexture name="Bf Idle0010" x="0" y="648" width="250" height="322" frameX="-6" frameY="0" frameWidth="261" frameHeight="322" />
+<SubTexture name="Bf Idle0011" x="250" y="648" width="250" height="322" frameX="-6" frameY="0" frameWidth="261" frameHeight="322" />
+<SubTexture name="Bf Idle0012" x="744" y="648" width="252" height="321" frameX="-6" frameY="-1" frameWidth="261" frameHeight="322" />
+<SubTexture name="Bf Idle0013" x="997" y="0" width="252" height="321" frameX="-6" frameY="-1" frameWidth="261" frameHeight="322" />
+<SubTexture name="Bf L Miss0000" x="0" y="0" width="251" height="325" frameX="-12" frameY="-1" frameWidth="317" frameHeight="326" />
+<SubTexture name="Bf Left0000" x="1249" y="642" width="251" height="319" frameX="0" frameY="0" frameWidth="253" frameHeight="319" />
+<SubTexture name="Bf Left0001" x="997" y="321" width="251" height="319" frameX="0" frameY="0" frameWidth="253" frameHeight="319" />
+<SubTexture name="Bf Left0002" x="997" y="640" width="247" height="319" frameX="-4" frameY="0" frameWidth="253" frameHeight="319" />
+<SubTexture name="Bf R Miss0000" x="500" y="0" width="245" height="323" frameX="-9" frameY="-1" frameWidth="282" frameHeight="333" />
+<SubTexture name="Bf Right0000" x="789" y="970" width="241" height="316" frameX="-11" frameY="0" frameWidth="251" frameHeight="316" />
+<SubTexture name="Bf Right0001" x="789" y="970" width="241" height="316" frameX="-11" frameY="0" frameWidth="251" frameHeight="316" />
+<SubTexture name="Bf Right0002" x="1030" y="970" width="242" height="316" frameX="-7" frameY="0" frameWidth="251" frameHeight="316" />
+<SubTexture name="Bf U Miss0000" x="251" y="0" width="249" height="324" frameX="-2" frameY="-3" frameWidth="263" frameHeight="327" />
+<SubTexture name="Bf Up0000" x="501" y="325" width="243" height="322" frameX="-6" frameY="0" frameWidth="253" frameHeight="322" />
+<SubTexture name="Bf Up0001" x="501" y="648" width="243" height="322" frameX="-6" frameY="0" frameWidth="253" frameHeight="322" />
+<SubTexture name="Bf Up0002" x="539" y="970" width="250" height="317" frameX="-1" frameY="-5" frameWidth="253" frameHeight="322" />
+</TextureAtlas>
