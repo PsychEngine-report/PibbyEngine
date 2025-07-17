@@ -1,57 +1,57 @@
 {
-  "storyName": "",
-  "difficulties": "Normal",
-  "hideFreeplay": false,
-  "weekBackground": "stage",
-  "weekBefore": "cawm",
-  "startUnlocked": true,
-  "weekCharacters": [
-    "",
-    "back",
-    "menu_gumball"
-  ],
-  "songs": [
-    [
-      "childs-play",
-      "gumball",
-      [
-        82,
-        165,
-        235
-      ],
-      20
-    ],
-    [
-      "my-amazing-world",
-      "gumball",
-      [
-        82,
-        165,
-        235
-      ],
-      45
-    ],
-    [
-      "retcon",
-      "gumball",
-      [
-        82,
-        165,
-        235
-      ],
-      55
-    ],
-    [
-      "forgotten-world",
-      "gumball",
-      [
-        82,
-        165,
-        235
-      ],
-      65
-    ]
-  ],
-  "hideStoryMode": false,
-  "weekName": "gumball"
+	"storyName": "",
+	"difficulties": "Normal",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "cawm",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"back",
+		"menu_gumball"
+	],
+	"songs": [
+		[
+			"Child's Play",
+			"gumball",
+			[
+				82,
+				165,
+				235
+			],
+			20
+		],
+		[
+			"My Amazing World",
+			"gumball",
+			[
+				82,
+				165,
+				235
+			],
+			45
+		],
+		[
+			"Retcon",
+			"gumball",
+			[
+				82,
+				165,
+				235
+			],
+			55
+		],
+		[
+			"Forgotten World",
+			"gumball",
+			[
+				82,
+				165,
+				235
+			],
+			65
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "gumball"
 }
