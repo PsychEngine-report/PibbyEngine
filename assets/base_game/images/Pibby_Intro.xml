@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="Pibby Intro.png">
+	
+	
+	<SubTexture name="Pibby 10000" x="27" y="27" width="183" height="207" frameX="0" frameY="-3" frameWidth="185" frameHeight="210" />
+	<SubTexture name="Pibby 10001" x="238" y="27" width="185" height="209" frameX="0" frameY="-1" frameWidth="185" frameHeight="210" />
+	<SubTexture name="Pibby 10002" x="238" y="27" width="185" height="209" frameX="0" frameY="-1" frameWidth="185" frameHeight="210" />
+	<SubTexture name="Pibby 10003" x="451" y="27" width="184" height="209" frameX="0" frameY="-1" frameWidth="185" frameHeight="210" />
+	<SubTexture name="Pibby 10004" x="451" y="27" width="184" height="209" frameX="0" frameY="-1" frameWidth="185" frameHeight="210" />
+	<SubTexture name="Pibby 10005" x="662" y="27" width="184" height="209" frameX="0" frameY="-1" frameWidth="185" frameHeight="210" />
+	<SubTexture name="Pibby 10006" x="662" y="27" width="184" height="209" frameX="0" frameY="-1" frameWidth="185" frameHeight="210" />
+	<SubTexture name="Pibby 10007" x="874" y="27" width="185" height="209" frameX="0" frameY="-1" frameWidth="185" frameHeight="210" />
+	<SubTexture name="Pibby 10008" x="874" y="27" width="185" height="209" frameX="0" frameY="-1" frameWidth="185" frameHeight="210" />
+	<SubTexture name="Pibby 10009" x="1087" y="27" width="185" height="209" frameX="0" frameY="-1" frameWidth="185" frameHeight="210" />
+	<SubTexture name="Pibby 10010" x="1087" y="27" width="185" height="209" frameX="0" frameY="-1" frameWidth="185" frameHeight="210" />
+	<SubTexture name="Pibby 10011" x="1087" y="27" width="185" height="209" frameX="0" frameY="-1" frameWidth="185" frameHeight="210" />
+	<SubTexture name="Pibby 10012" x="1087" y="27" width="185" height="209" frameX="0" frameY="-1" frameWidth="185" frameHeight="210" />
+	<SubTexture name="Pibby 10013" x="1087" y="27" width="185" height="209" frameX="0" frameY="-1" frameWidth="185" frameHeight="210" />
+	<SubTexture name="Pibby 10014" x="1087" y="27" width="185" height="209" frameX="0" frameY="-1" frameWidth="185" frameHeight="210" />
+	<SubTexture name="Pibby 10015" x="1087" y="27" width="185" height="209" frameX="0" frameY="-1" frameWidth="185" frameHeight="210" />
+	<SubTexture name="Pibby 20000" x="1299" y="27" width="194" height="215" frameX="-14" frameY="-78" frameWidth="207" frameHeight="293" />
+	<SubTexture name="Pibby 20001" x="1521" y="27" width="194" height="215" frameX="-14" frameY="-78" frameWidth="207" frameHeight="293" />
+	<SubTexture name="Pibby 20002" x="1742" y="27" width="207" height="293" />
+	<SubTexture name="Pibby 20003" x="1742" y="27" width="207" height="293" />
+	<SubTexture name="Pibby 20004" x="27" y="348" width="207" height="293" />
+	<SubTexture name="Pibby 20005" x="27" y="348" width="207" height="293" />
+	<SubTexture name="Pibby 20006" x="262" y="348" width="207" height="293" frameX="-1" frameY="0" frameWidth="207" frameHeight="293" />
+	<SubTexture name="Pibby 20007" x="262" y="348" width="207" height="293" frameX="-1" frameY="0" frameWidth="207" frameHeight="293" />
+	<SubTexture name="Pibby 20008" x="497" y="348" width="207" height="293" frameX="-1" frameY="0" frameWidth="207" frameHeight="293" />
+	<SubTexture name="Pibby 20009" x="497" y="348" width="207" height="293" frameX="-1" frameY="0" frameWidth="207" frameHeight="293" />
+	<SubTexture name="Pibby 20010" x="731" y="348" width="207" height="293" frameX="-1" frameY="0" frameWidth="207" frameHeight="293" />
+	<SubTexture name="Pibby 20011" x="966" y="348" width="207" height="293" frameX="-1" frameY="0" frameWidth="207" frameHeight="293" />
+	<SubTexture name="Pibby 20012" x="966" y="348" width="207" height="293" frameX="-1" frameY="0" frameWidth="207" frameHeight="293" />
+	<SubTexture name="Pibby 20013" x="966" y="348" width="207" height="293" frameX="-1" frameY="0" frameWidth="207" frameHeight="293" />
+	<SubTexture name="Pibby 20014" x="966" y="348" width="207" height="293" frameX="-1" frameY="0" frameWidth="207" frameHeight="293" />
+	<SubTexture name="Pibby 20015" x="966" y="348" width="207" height="293" frameX="-1" frameY="0" frameWidth="207" frameHeight="293" />
+	<SubTexture name="Pibby 30000" x="1200" y="348" width="181" height="220" frameX="-4" frameY="0" frameWidth="184" frameHeight="220" />
+	<SubTexture name="Pibby 30001" x="1409" y="348" width="181" height="220" frameX="-4" frameY="0" frameWidth="184" frameHeight="220" />
+	<SubTexture name="Pibby 30002" x="1617" y="348" width="184" height="220" />
+	<SubTexture name="Pibby 30003" x="1617" y="348" width="184" height="220" />
+	<SubTexture name="Pibby 30004" x="1829" y="348" width="184" height="220" />
+	<SubTexture name="Pibby 30005" x="1829" y="348" width="184" height="220" />
+	<SubTexture name="Pibby 30006" x="27" y="669" width="184" height="220" />
+	<SubTexture name="Pibby 30007" x="27" y="669" width="184" height="220" />
+	<SubTexture name="Pibby 30008" x="239" y="669" width="184" height="220" />
+	<SubTexture name="Pibby 30009" x="239" y="669" width="184" height="220" />
+	<SubTexture name="Pibby 30010" x="451" y="669" width="184" height="220" />
+	<SubTexture name="Pibby 30011" x="663" y="669" width="184" height="220" />
+	<SubTexture name="Pibby 30012" x="663" y="669" width="184" height="220" />
+	<SubTexture name="Pibby 30013" x="663" y="669" width="184" height="220" />
+	<SubTexture name="Pibby 30014" x="663" y="669" width="184" height="220" />
+	<SubTexture name="Pibby 30015" x="663" y="669" width="184" height="220" />
+	<SubTexture name="Pibby Go0000" x="875" y="669" width="171" height="204" frameX="0" frameY="0" frameWidth="174" frameHeight="204" />
+	<SubTexture name="Pibby Go0001" x="1074" y="669" width="171" height="204" frameX="0" frameY="0" frameWidth="174" frameHeight="204" />
+	<SubTexture name="Pibby Go0002" x="1272" y="669" width="167" height="197" frameX="-4" frameY="-7" frameWidth="174" frameHeight="204" />
+	<SubTexture name="Pibby Go0003" x="1272" y="669" width="167" height="197" frameX="-4" frameY="-7" frameWidth="174" frameHeight="204" />
+	<SubTexture name="Pibby Go0004" x="1467" y="669" width="164" height="198" frameX="-8" frameY="-6" frameWidth="174" frameHeight="204" />
+	<SubTexture name="Pibby Go0005" x="1467" y="669" width="164" height="198" frameX="-8" frameY="-6" frameWidth="174" frameHeight="204" />
+	<SubTexture name="Pibby Go0006" x="1659" y="669" width="166" height="197" frameX="-7" frameY="-7" frameWidth="174" frameHeight="204" />
+	<SubTexture name="Pibby Go0007" x="1659" y="669" width="166" height="197" frameX="-7" frameY="-7" frameWidth="174" frameHeight="204" />
+	<SubTexture name="Pibby Go0008" x="1853" y="669" width="167" height="196" frameX="-7" frameY="-8" frameWidth="174" frameHeight="204" />
+	<SubTexture name="Pibby Go0009" x="1853" y="669" width="167" height="196" frameX="-7" frameY="-8" frameWidth="174" frameHeight="204" />
+	<SubTexture name="Pibby Go0010" x="27" y="917" width="167" height="197" frameX="-8" frameY="-7" frameWidth="174" frameHeight="204" />
+	<SubTexture name="Pibby Go0011" x="222" y="917" width="167" height="197" frameX="-8" frameY="-7" frameWidth="174" frameHeight="204" />
+	<SubTexture name="Pibby Go0012" x="416" y="917" width="167" height="197" frameX="-8" frameY="-7" frameWidth="174" frameHeight="204" />
+	<SubTexture name="Pibby Go0013" x="416" y="917" width="167" height="197" frameX="-8" frameY="-7" frameWidth="174" frameHeight="204" />
+	<SubTexture name="Pibby Go0014" x="416" y="917" width="167" height="197" frameX="-8" frameY="-7" frameWidth="174" frameHeight="204" />
+	<SubTexture name="Pibby Go0015" x="416" y="917" width="167" height="197" frameX="-8" frameY="-7" frameWidth="174" frameHeight="204" />
+</TextureAtlas>
