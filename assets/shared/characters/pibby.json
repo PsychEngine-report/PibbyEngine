@@ -125,8 +125,8 @@
 	"no_antialiasing": false,
 	"image": "characters/pibby",
 	"position": [
-		130,
-		500
+		160,
+		440
 	],
 	"healthicon": "pibby",
 	"flip_x": false,
@@ -136,8 +136,8 @@
 		170
 	],
 	"camera_position": [
-		-550,
-		-180
+		-570,
+		-120
 	],
 	"sing_duration": 5,
 	"scale": 2
