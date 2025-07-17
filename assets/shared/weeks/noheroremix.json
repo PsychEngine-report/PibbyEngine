@@ -1,27 +1,27 @@
 {
-  "storyName": "",
-  "difficulties": "Normal",
-  "hideFreeplay": false,
-  "weekBackground": "stage",
-  "weekBefore": "finn",
-  "startUnlocked": true,
-  "weekCharacters": [
-    "",
-    "",
-    ""
-  ],
-  "songs": [
-    [
-      "no-hero-remix",
-      "finnbad",
-      [
-        82,
-        165,
-        235
-      ],
-      75
-    ]
-  ],
-  "hideStoryMode": true,
-  "weekName": "cawm"
+	"storyName": "",
+	"difficulties": "Normal",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "finn",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"",
+		""
+	],
+	"songs": [
+		[
+			"No Hero Remix",
+			"finnbad",
+			[
+				82,
+				165,
+				235
+			],
+			75
+		]
+	],
+	"hideStoryMode": true,
+	"weekName": "cawm"
 }
