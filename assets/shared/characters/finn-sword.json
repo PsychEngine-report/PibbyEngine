@@ -1,66 +1,66 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				288,
 				11
 			],
-			"loop": false,
-			"anim": "singLEFT",
 			"fps": 24,
-			"name": "Left",
-			"indices": []
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Left"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-62,
 				-206
 			],
-			"loop": false,
-			"anim": "singDOWN",
 			"fps": 24,
-			"name": "Down",
-			"indices": []
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Down"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				30,
 				375
 			],
-			"loop": false,
-			"anim": "singUP",
 			"fps": 24,
-			"name": "Up",
-			"indices": []
+			"anim": "singUP",
+			"indices": [],
+			"name": "Up"
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-84,
 				13
 			],
-			"loop": false,
-			"anim": "singRIGHT",
 			"fps": 24,
-			"name": "Right",
-			"indices": []
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Right"
 		},
 		{
-			"loop": true,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "idle",
+			"loop": true,
 			"fps": 24,
-			"name": "Idle",
-			"indices": []
+			"anim": "idle",
+			"indices": [],
+			"name": "Idle"
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/Finn-sword",
 	"position": [
 		210,
-		170
+		250
 	],
 	"healthicon": "finn",
 	"flip_x": false,
@@ -70,9 +70,9 @@
 		179
 	],
 	"camera_position": [
-		-290,
-		-90
+		-250,
+		-80
 	],
 	"sing_duration": 6.1,
-	"scale": 2
+	"scale": 2.6
 }
