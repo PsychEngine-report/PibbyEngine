@@ -1,27 +1,27 @@
 {
-  "storyName": "",
-  "difficulties": "Normal",
-  "hideFreeplay": false,
-  "weekBackground": "stage",
-  "weekBefore": "finn",
-  "startUnlocked": true,
-  "weekCharacters": [
-    "",
-    "back",
-    "menu_finncawn"
-  ],
-  "songs": [
-    [
-      "come-along-with-me",
-      "finn",
-      [
-        82,
-        165,
-        235
-      ],
-      75
-    ]
-  ],
-  "hideStoryMode": false,
-  "weekName": "cawm"
+	"storyName": "",
+	"difficulties": "Normal",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "finn",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"back",
+		"menu_finncawn"
+	],
+	"songs": [
+		[
+			"Come Along With Me",
+			"finn",
+			[
+				82,
+				165,
+				235
+			],
+			75
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "cawm"
 }
