@@ -1,0 +1,133 @@
+Français (France)
+
+// Gameplay
+score_text : « Points : {1} | Échecs : {2} | Note : {3} »
+score_text_instakill : « Points : {1} | Note : {2} »
+botplay : « Automatique »
+
+rating_you_suck : « C'est horrible !»
+rating_shit : « Merde »
+rating_bad : « Mauvais »
+rating_bruh : « Mauvais »
+rating_meh : « Bof »
+rating_nice : « Pas mal »
+rating_good : « Bien »
+rating_great : « Excellent »
+rating_sick : « Fonce !»
+rating_perfect : « Parfait !»
+
+// Dialogues
+dialogue_skip: "Appuyer sur RETOUR pour passer"
+
+// Menu Pause
+pause_resume: "Reprendre"
+pause_restart_song: "Recommencer la chanson"
+pause_leave_charting_mode: "Quitter le mode Charter"
+pause_skip_time: "Durée de la chanson"
+pause_end_song: "Finir la chanson"
+pause_change_difficulty: "Modifier la difficulté"
+pause_toggle_practice_mode: "Activer le mode Entraînement"
+pause_toggle_botplay: "Activer le mode Auto"
+pause_options: "Options"
+pause_exit_to_menu: "Retour au menu"
+pause_back: "Retour"
+practice_mode: "Mode Entraînement"
+charting_mode: "Mode Charter"
+blueballed: "Broxadas: {1}"
+
+// Menu principal
+images/mainmenu/menu_story_mode: "images/pt-BR/mainmenu/menu_story_mode"
+images/mainmenu/menu_credits: "images/pt-BR/mainmenu/menu_credits"
+
+// Mode Histoire
+images/Menu_Tracks: "images/pt-BR/Menu_Tracks"
+week_score: "SCORE: {1}"
+
+storyname_week5: "RED BLIZZARD"
+storyname_week6: "Confrontation Simulator ft. Moawling"
+storyname_weekend1: "Retards de paiement"
+
+// Jeu libre
+personal_best: "MEILLEUR SCORE: {1} ({2}%)"
+freeplay_tip: "Appuyez sur {1} pour écouter la chanson / Appuyez sur {2} pour ouvrir le menu Mod / Appuyez sur {3} pour effacer votre score."
+
+musicplayer_playing: "MUSIQUE : {1}"
+musicplayer_paused: "MUSIQUE : {1} (EN PAUSE)"
+musicplayer_tip: "Appuyez sur {1} pour mettre en pause / Appuyez sur {2} pour quitter / Appuyez sur {3} pour relancer la musique"
+
+// Menu Mods
+no_mods_installed: "AUCUN MOD INSTALLÉ\nAPPUYEZ SUR {1} POUR QUITTER OU AJOUTER UN MOD"
+no_mods_found: "Aucun mod trouvé."
+mods_leave: "Appuyez sur {1} pour quitter"
+mod_restart: "* Déplacer ou changer de mod redémarrera le jeu."
+
+reload_button: "RECHARGER"
+enable_all_button: "TOUT ACTIVER"
+disable_all_button: "TOUT DÉSACTIVER"
+
+// Réinitialiser le score/succès
+reset_score: "Réinitialiser le score de"
+reset_achievement: "Réinitialiser le succès :"
+yes: "Oui"
+no: "Non"
+
+// Succès
+achievement_friday_night_play: "C'est vendredi"
+description_friday_night_play: "Jouer un vendredi soir."
+achievement_week1_nomiss: "Elle m'appelle aussi papa"
+description_week1_nomiss: "Terminer la semaine 1 en mode difficile sans faire d'erreur."
+achievement_week2_nomiss: "Fini les conneries"
+description_week2_nomiss: "Terminer la semaine 2 en mode difficile sans faire d'erreur."
+achievement_week3_nomiss: "Cible neutralisée"
+description_week3_nomiss: "Terminez la semaine 3 en mode difficile sans faire d'erreur."
+achievement_week4_nomiss: "Mangeur marié"
+description_week4_nomiss: "Terminez la semaine 4 en mode difficile sans faire d'erreur."
+achievement_week5_nomiss: "Noël aigre"
+description_week5_nomiss: "Terminez la semaine 5 en mode difficile sans faire d'erreur."
+achievement_week6_nomiss: "Nouveau record !!"
+description_week6_nomiss: "Terminez la semaine 6 en mode difficile sans faire d'erreur."
+achievement_week7_nomiss: "Fils de pute..."
+description_week7_nomiss: "Terminez la semaine 7 en mode difficile sans faire d'erreur."
+achievement_weekend1_nomiss: "Combattez sans perdre votre amitié"
+description_weekend1_nomiss: "Terminez le week-end 1 en mode difficile sans faire d'erreur."
+achievement_ur_bad: "Score désastreux !"
+description_ur_bad: "Terminez une chanson avec moins de 20 % de précision."
+achievement_ur_good: "Perfectionniste"
+description_ur_good: "Terminez une chanson avec 100 % de précision."
+achievement_roadkill_enthusiast: "Regardez toujours des deux côtés"
+description_roadkill_enthusiast: "Regardez les hommes de main se faire tuer 50 fois."
+achievement_oversinging: "Qui est le chanteur ?"
+description_oversinging: "Chantez pendant 10 secondes ou plus."
+achievement_hype: "TDAH"
+description_hype: "Terminez une chanson sans jamais vous arrêter."
+achievement_two_keys: "Maintenant, c'est juste toi et moi !"
+description_two_keys: "Termine une chanson en appuyant sur deux touches."
+achievement_toastie: "PC grille-pain"
+description_toastie: "Tu joues sur un PC Xuxa, hein ?"
+achievement_debugger: "Mode débogage"
+description_debugger: "Termine la chanson "Test" avec l'éditeur de graphiques."
+achievement_pessy_easter_egg: "Fille programmatrice"
+description_pessy_easter_egg: "Hé hé, tu m'as trouvée~!"
+
+// Options
+options_note_colors: "Coloration des notes"
+options_controls: "Contrôles"
+options_adjust_delay_and_combo: "Ajuster le délai et le combo"
+options_gameplay: "Gameplay"
+options_visuals: "Visuels"
+options_graphics: "Graphismes"
+options_language: "Langue"
+
+graphics_menu: "Paramètres graphiques"
+visuals_menu: "Options visuelles"
+gameplay_menu: "Paramètres de jeu"
+
+// Menu Couleurs des notes
+note_colors_tip: "Appuyez sur {1} pour réinitialiser la partie sélectionnée de la note."
+note_colors_hold_tip: "Maintenez {1} et appuyez sur RESET pour réinitialiser la note sélectionnée."
+
+note_colors_shift: "Maj"
+note_colors_lb: "Bouton gauche"
+
+// Menu Ajuster le délai et le combo
+delay_beat_hit: "Battement !" délai_courant_o
