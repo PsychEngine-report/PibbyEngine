@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="gumballglitchbg.png">
+<SubTexture name="spin0000" x="0" y="0" width="346" height="211" frameX="0" frameY="0" frameWidth="326" frameHeight="191" />
+<SubTexture name="spin0001" x="346" y="0" width="346" height="211" frameX="0" frameY="0" frameWidth="326" frameHeight="191" />
+<SubTexture name="spin0002" x="0" y="211" width="346" height="211" frameX="0" frameY="0" frameWidth="326" frameHeight="191" />
+<SubTexture name="spin0003" x="346" y="211" width="346" height="211" frameX="0" frameY="0" frameWidth="326" frameHeight="191" />
+<SubTexture name="spin0004" x="0" y="422" width="346" height="211" frameX="0" frameY="0" frameWidth="326" frameHeight="191" />
+<SubTexture name="spin0005" x="346" y="422" width="346" height="211" frameX="0" frameY="0" frameWidth="326" frameHeight="191" />
+<SubTexture name="spin0006" x="0" y="633" width="346" height="211" frameX="0" frameY="0" frameWidth="326" frameHeight="191" />
+<SubTexture name="spin0007" x="346" y="633" width="346" height="211" frameX="0" frameY="0" frameWidth="326" frameHeight="191" />
+<SubTexture name="spin0008" x="0" y="844" width="346" height="211" frameX="0" frameY="0" frameWidth="326" frameHeight="191" />
+<SubTexture name="spin0009" x="346" y="844" width="346" height="211" frameX="0" frameY="0" frameWidth="326" frameHeight="191" />
+</TextureAtlas>
