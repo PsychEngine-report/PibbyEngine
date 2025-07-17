@@ -2,8 +2,8 @@
 	"animations": [
 		{
 			"offsets": [
-				210,
-				-216
+				218,
+				-212
 			],
 			"loop": false,
 			"fps": 24,
@@ -14,7 +14,7 @@
 		{
 			"offsets": [
 				-34,
-				-230
+				-228
 			],
 			"loop": false,
 			"fps": 24,
@@ -25,7 +25,7 @@
 		{
 			"offsets": [
 				88,
-				-118
+				-116
 			],
 			"loop": false,
 			"fps": 24,
@@ -36,7 +36,7 @@
 		{
 			"offsets": [
 				82,
-				-86
+				-85
 			],
 			"loop": false,
 			"fps": 24,
@@ -47,7 +47,7 @@
 		{
 			"offsets": [
 				-20,
-				-162
+				-160
 			],
 			"loop": true,
 			"anim": "idle",
@@ -59,7 +59,7 @@
 			"loop": true,
 			"offsets": [
 				50,
-				-121
+				-120
 			],
 			"anim": "haha",
 			"fps": 24,
@@ -70,7 +70,7 @@
 	"no_antialiasing": false,
 	"image": "characters/gumball",
 	"position": [
-		150,
+		160,
 		140
 	],
 	"healthicon": "gumball",
@@ -81,8 +81,8 @@
 		235
 	],
 	"camera_position": [
-		-210,
-		20
+		-240,
+		40
 	],
 	"sing_duration": 3,
 	"scale": 2.4
