@@ -1,57 +1,57 @@
 {
-  "storyName": "",
-  "difficulties": "Normal",
-  "hideFreeplay": false,
-  "weekBackground": "stage",
-  "weekBefore": "",
-  "startUnlocked": true,
-  "weekCharacters": [
-    "",
-    "back",
-    "menu_finnjake"
-  ],
-  "songs": [
-    [
-      "mindless",
-      "finn",
-      [
-        82,
-        165,
-        235
-      ],
-      85
-    ],
-    [
-      "blessed-by-swords",
-      "finn",
-      [
-        82,
-        165,
-        235
-      ],
-      90
-    ],
-    [
-      "brotherly-love",
-      "jake",
-      [
-        82,
-        165,
-        235
-      ],
-      80
-    ],
-    [
-      "suffering-siblings",
-      "finn",
-      [
-        82,
-        165,
-        235
-      ],
-      95
-    ]
-  ],
-  "hideStoryMode": false,
-  "weekName": "finn"
+	"storyName": "",
+	"difficulties": "Normal",
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"weekBefore": "",
+	"startUnlocked": true,
+	"weekCharacters": [
+		"",
+		"back",
+		"menu_finnjake"
+	],
+	"songs": [
+		[
+			"Mindless",
+			"finn",
+			[
+				82,
+				165,
+				235
+			],
+			85
+		],
+		[
+			"Blessed by Swords",
+			"finn",
+			[
+				82,
+				165,
+				235
+			],
+			90
+		],
+		[
+			"Brotherly Love",
+			"jake",
+			[
+				82,
+				165,
+				235
+			],
+			80
+		],
+		[
+			"Suffering Siblings",
+			"finn",
+			[
+				82,
+				165,
+				235
+			],
+			95
+		]
+	],
+	"hideStoryMode": false,
+	"weekName": "finn"
 }
