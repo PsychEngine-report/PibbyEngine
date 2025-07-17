@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="bfscared.png">
+<SubTexture name="scared0000" x="0" y="252" width="340" height="251" frameX="-8" frameY="-105" frameWidth="360" frameHeight="440" />
+<SubTexture name="scared0001" x="340" y="252" width="340" height="251" frameX="-8" frameY="-105" frameWidth="360" frameHeight="440" />
+<SubTexture name="scared0002" x="680" y="0" width="340" height="251" frameX="-8" frameY="-105" frameWidth="360" frameHeight="440" />
+<SubTexture name="scared0003" x="680" y="251" width="338" height="251" frameX="-9" frameY="-105" frameWidth="360" frameHeight="440" />
+<SubTexture name="scared0004" x="0" y="0" width="339" height="252" frameX="-8" frameY="-104" frameWidth="360" frameHeight="440" />
+<SubTexture name="scared0005" x="0" y="503" width="341" height="251" frameX="-9" frameY="-105" frameWidth="360" frameHeight="440" />
+<SubTexture name="scared0006" x="341" y="503" width="339" height="251" frameX="-9" frameY="-105" frameWidth="360" frameHeight="440" />
+<SubTexture name="scared0007" x="339" y="0" width="341" height="252" frameX="-9" frameY="-104" frameWidth="360" frameHeight="440" />
+<SubTexture name="scared0008" x="341" y="754" width="341" height="249" frameX="-13" frameY="-106" frameWidth="360" frameHeight="440" />
+<SubTexture name="scared0009" x="1020" y="0" width="339" height="249" frameX="-19" frameY="-106" frameWidth="360" frameHeight="440" />
+<SubTexture name="scared0010" x="0" y="754" width="341" height="250" frameX="-15" frameY="-105" frameWidth="360" frameHeight="440" />
+<SubTexture name="scared0011" x="1020" y="748" width="339" height="248" frameX="-16" frameY="-107" frameWidth="360" frameHeight="440" />
+<SubTexture name="scared0012" x="1020" y="249" width="338" height="249" frameX="-15" frameY="-106" frameWidth="360" frameHeight="440" />
+<SubTexture name="scared0013" x="0" y="1004" width="340" height="249" frameX="-15" frameY="-106" frameWidth="360" frameHeight="440" />
+<SubTexture name="scared0014" x="1020" y="499" width="339" height="249" frameX="-15" frameY="-107" frameWidth="360" frameHeight="440" />
+<SubTexture name="scared0015" x="340" y="1004" width="341" height="248" frameX="-12" frameY="-108" frameWidth="360" frameHeight="440" />
+<SubTexture name="scared0016" x="680" y="503" width="340" height="251" frameX="-8" frameY="-105" frameWidth="360" frameHeight="440" />
+</TextureAtlas>
