@@ -1,0 +1,45 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "finncutscene",
+			"fps": 40,
+			"name": "FINN-CUTSCENE",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 35,
+			"name": "FINN-CUTSCENE",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Finn_Transformation",
+	"position": [
+		130,
+		160
+	],
+	"healthicon": "finn",
+	"flip_x": false,
+	"healthbar_colors": [
+		125,
+		133,
+		-2147483648
+	],
+	"camera_position": [
+		-420,
+		-230
+	],
+	"sing_duration": 6.1,
+	"scale": 2.2
+}

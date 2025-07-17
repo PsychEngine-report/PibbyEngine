@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				30,
+				-90
+			],
+			"indices": [],
+			"fps": 26,
+			"anim": "singDOWN",
+			"loop": false,
+			"name": "down"
+		},
+		{
+			"offsets": [
+				274,
+				121
+			],
+			"indices": [],
+			"fps": 26,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "left"
+		},
+		{
+			"offsets": [
+				93,
+				89
+			],
+			"indices": [],
+			"fps": 26,
+			"anim": "singUP",
+			"loop": false,
+			"name": "up"
+		},
+		{
+			"offsets": [
+				-55,
+				-28
+			],
+			"indices": [],
+			"fps": 26,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "right"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/finn-the-human",
+	"position": [
+		40,
+		-20
+	],
+	"healthicon": "finn",
+	"flip_x": false,
+	"healthbar_colors": [
+		168,
+		160,
+		179
+	],
+	"camera_position": [
+		50,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 0.8
+}
