@@ -55,15 +55,7 @@ vec2 iResolution = openfl_TextureSize;
     float rnd = random2d(vec2(time , 9545.0));
     vec2 colOffset = vec2(randomRange(vec2(time , 9545.0),-maxColOffset,maxColOffset), 
                        randomRange(vec2(time , 7205.0),-maxColOffset,maxColOffset));
-    if (rnd < 0.33){
-        outCol.r = texture(iChannel0, uv - colOffset).r;
-        
-    }else if (rnd < 0.66){
-        outCol.g = texture(iChannel0, uv - colOffset).g;
-        
-    } else{
-        outCol.b = texture(iChannel0, uv - colOffset).b;  
-    }
+    
        
 	fragColor = vec4(outCol,flixel_texture2D(iChannel0,uv).a);
 } 
