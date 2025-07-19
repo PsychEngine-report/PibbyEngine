@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "Spinel idle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				276,
+				416
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Spinel left",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				254
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "spinel down",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-2,
+				501
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "spinel up",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				-18,
+				489
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "spinel right",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/spinel",
+	"position": [
+		380,
+		90
+	],
+	"healthicon": "steven",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		129,
+		190
+	],
+	"camera_position": [
+		-320,
+		-260
+	],
+	"sing_duration": 6.1,
+	"scale": 2
+}
