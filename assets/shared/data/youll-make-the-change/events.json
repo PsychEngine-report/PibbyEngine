@@ -1,0 +1,436 @@
+{
+	"song": {
+		"events": [
+			[
+				0,
+				[
+					[
+						"Better Cinematics",
+						"0.01",
+						"100"
+					]
+				]
+			],
+			[
+				104.895104895105,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"1.2,0.01,expoout"
+					]
+				]
+			],
+			[
+				2517.48251748252,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.8,10,expoout"
+					],
+					[
+						"BlackFlash",
+						"10",
+						"10"
+					]
+				]
+			],
+			[
+				13426.5734265734,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.55,1,expoout"
+					]
+				]
+			],
+			[
+				13426.5734265734,
+				[
+					[
+						"Better Cinematics",
+						"1",
+						"50"
+					]
+				]
+			],
+			[
+				20139.8601398601,
+				[
+					[
+						"Screen Shake",
+						"2.5, 0.0015",
+						"2.5, 0.001"
+					]
+				]
+			],
+			[
+				20139.8601398601,
+				[
+					[
+						"Better Cinematics",
+						"1",
+						"100"
+					]
+				]
+			],
+			[
+				26853.1468531468,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.65,5,expoout"
+					]
+				]
+			],
+			[
+				33041.958041958,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.6,0.001,expoout"
+					]
+				]
+			],
+			[
+				33461.5384615385,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.45,7,expoout"
+					],
+					[
+						"Better Cinematics",
+						"0.01",
+						"60"
+					]
+				]
+			],
+			[
+				40279.7202797203,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.55,2,expoout"
+					],
+					[
+						"WhiteFlash",
+						"1",
+						"1"
+					],
+					[
+						"Better Cinematics",
+						"0.5",
+						"0"
+					]
+				]
+			],
+			[
+				99020.979020979,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.75,0.5,expoout"
+					],
+					[
+						"Better Cinematics",
+						"0.5",
+						"120"
+					]
+				]
+			],
+			[
+				100699.300699301,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.55,0.5,expoout"
+					],
+					[
+						"WhiteFlash",
+						"1",
+						"1"
+					],
+					[
+						"Better Cinematics",
+						"0.5",
+						"40"
+					]
+				]
+			],
+			[
+				104055.944055944,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.65,5,expoout"
+					]
+				]
+			],
+			[
+				107412.587412587,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.55,0.5,expoout"
+					]
+				]
+			],
+			[
+				116538.461538462,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.75,0.01,expoout"
+					]
+				]
+			],
+			[
+				121258.741258741,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.6,6,expoout"
+					]
+				]
+			],
+			[
+				121363.636363636,
+				[
+					[
+						"WhiteFlash",
+						"1",
+						"1"
+					]
+				]
+			],
+			[
+				133321.678321678,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.7,3,expoout"
+					]
+				]
+			],
+			[
+				134265.734265734,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.6,1,expoout"
+					],
+					[
+						"WhiteFlash",
+						"1",
+						"1"
+					],
+					[
+						"Better Cinematics",
+						"1",
+						"0"
+					]
+				]
+			],
+			[
+				147692.307692308,
+				[
+					[
+						"Better Cinematics",
+						"1",
+						"80"
+					]
+				]
+			],
+			[
+				148111.888111888,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.8,8,expoout"
+					]
+				]
+			],
+			[
+				167412.587412588,
+				[
+					[
+						"Better Cinematics",
+						"1",
+						"40"
+					]
+				]
+			],
+			[
+				169300.6993007,
+				[
+					[
+						"WhiteFlash",
+						"1",
+						"1"
+					]
+				]
+			],
+			[
+				172447.552447553,
+				[
+					[
+						"Better Cinematics",
+						"1",
+						"90"
+					]
+				]
+			],
+			[
+				172867.132867133,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.6,0.5,expoout"
+					]
+				]
+			],
+			[
+				174545.454545455,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.75,0.5,expoout"
+					],
+					[
+						"Better Cinematics",
+						"0.5",
+						"0"
+					]
+				]
+			],
+			[
+				186293.706293707,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.55,0.5,expoout"
+					],
+					[
+						"Better Cinematics",
+						"0.5",
+						"40"
+					]
+				]
+			],
+			[
+				187972.027972028,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.6,1,expoout"
+					],
+					[
+						"Better Cinematics",
+						"0.5",
+						"0"
+					]
+				]
+			],
+			[
+				200559.440559441,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.9,0.5,expoout"
+					]
+				]
+			],
+			[
+				201398.601398602,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.6,5,expoout"
+					],
+					[
+						"BlackFlash",
+						"2",
+						"2"
+					],
+					[
+						"badapplelol",
+						"a",
+						"0.001"
+					]
+				]
+			],
+			[
+				208111.888111889,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.75,0.5,expoout"
+					]
+				]
+			],
+			[
+				211468.531468532,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.6,4,expoout"
+					]
+				]
+			],
+			[
+				214825.174825175,
+				[
+					[
+						"Bitto's zoom event",
+						"custom",
+						"0.85,7,expoout"
+					]
+				]
+			],
+			[
+				214825.174825175,
+				[
+					[
+						"Better Cinematics",
+						"0.5",
+						"80"
+					]
+				]
+			],
+			[
+				218181.818181819,
+				[
+					[
+						"Better Cinematics",
+						"1",
+						"20"
+					]
+				]
+			]
+		]
+	}
+}
