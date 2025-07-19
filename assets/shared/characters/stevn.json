@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				86,
+				146
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Left-wz",
+			"indices": []
+		},
+		{
+			"offsets": [
+				70,
+				80
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Down-wz",
+			"indices": []
+		},
+		{
+			"offsets": [
+				-12,
+				200
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Up-wz",
+			"indices": []
+		},
+		{
+			"offsets": [
+				12,
+				99
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Right-wz",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				109,
+				85
+			],
+			"anim": "singDOWN-alt",
+			"fps": 24,
+			"name": "Down-z",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				150,
+				248
+			],
+			"anim": "singLEFT-alt",
+			"fps": 24,
+			"name": "Left-z",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				70,
+				190
+			],
+			"anim": "singRIGHT-alt",
+			"fps": 24,
+			"name": "Right-z",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				14,
+				282
+			],
+			"anim": "singUP-alt",
+			"fps": 24,
+			"name": "Up-z",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": true,
+			"anim": "idle",
+			"fps": 24,
+			"name": "Idle",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/stevn",
+	"position": [
+		210,
+		190
+	],
+	"healthicon": "steven",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		129,
+		190
+	],
+	"camera_position": [
+		-200,
+		-260
+	],
+	"sing_duration": 6.1,
+	"scale": 2
+}
