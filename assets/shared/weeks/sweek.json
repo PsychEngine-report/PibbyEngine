@@ -1,0 +1,32 @@
+{
+	"songs": [
+		[
+			"Youll-Make-The-Change",
+			"steven",
+			[
+				200,
+				100,
+				175
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "",
+	"difficulties": "",
+	"weekCharacters": [
+		"",
+		"bf",
+		""
+	],
+	"storyName": "sweek",
+	"weekName": "sweek",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}
