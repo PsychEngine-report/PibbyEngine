@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<TextureAtlas imagePath="smoke.png">
+	
+	
+	<SubTexture name="Symbol 3 instance 10000" x="1" y="1" width="987" height="493" frameX="-5" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10001" x="1" y="1" width="987" height="493" frameX="-5" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10002" x="1" y="1" width="987" height="493" frameX="-5" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10003" x="1" y="1" width="987" height="493" frameX="-5" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10004" x="990" y="1" width="980" height="460" frameX="-13" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10005" x="990" y="1" width="980" height="460" frameX="-13" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10006" x="990" y="1" width="980" height="460" frameX="-13" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10007" x="990" y="1" width="980" height="460" frameX="-13" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10008" x="1" y="496" width="979" height="444" frameX="-10" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10009" x="1" y="496" width="979" height="444" frameX="-10" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10010" x="1" y="496" width="979" height="444" frameX="-10" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10011" x="1" y="496" width="979" height="444" frameX="-10" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10012" x="982" y="496" width="974" height="455" frameX="-4" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10013" x="982" y="496" width="974" height="455" frameX="-4" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10014" x="982" y="496" width="974" height="455" frameX="-4" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10015" x="982" y="496" width="974" height="455" frameX="-4" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10016" x="1" y="952" width="944" height="477" frameX="0" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10017" x="1" y="952" width="944" height="477" frameX="0" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10018" x="1" y="952" width="944" height="477" frameX="0" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10019" x="1" y="952" width="944" height="477" frameX="0" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10020" x="947" y="952" width="960" height="470" frameX="-6" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10021" x="947" y="952" width="960" height="470" frameX="-6" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10022" x="947" y="952" width="960" height="470" frameX="-6" frameY="0" frameWidth="993" frameHeight="493" />
+	<SubTexture name="Symbol 3 instance 10023" x="947" y="952" width="960" height="470" frameX="-6" frameY="0" frameWidth="993" frameHeight="493" />
+</TextureAtlas>
