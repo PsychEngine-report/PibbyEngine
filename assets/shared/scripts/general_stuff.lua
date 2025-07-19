@@ -3,12 +3,12 @@ function rgbToHex(array)
 end
 
 function onCreate()
-setPropertyFromClass("openfl.Lib", "application.window.title",'P:A EyeFanBuild')
+setPropertyFromClass("openfl.Lib", "application.window.title",'Pibby: Apocalypse | MindlessFANBuild')
 end
 
 function onCreatePost()
 
-makeAnimatedLuaSprite('count', 'countdown', 600, 300)
+makeAnimatedLuaSprite('count', 'countdown', 550, 300)
 scaleObject('count', 4.0, 4.0);
 setObjectCamera('count', 'other')
 addAnimationByPrefix('count', '1', '1', 24, true)
