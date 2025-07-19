@@ -19,7 +19,7 @@ yScale = 2
 
 invisible = false
 --tên .xml trong file images/characters/...(name .xml in file images/character/...)
-name_of_character_xml = 'spinel'
+name_of_character_xml = 'Spinel2'
 --tên của nhân vật(do bạn tạo)/ name of character(is your custom)
 name_of_character = 'Spinel2'
 --note dạng .lua nằm trong custom_notetypes.... Để hoạt động hoạt ảnh của nv/note form .lua in file custom_notetypes...To play anim of character
