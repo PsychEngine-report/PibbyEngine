@@ -45,7 +45,7 @@ class Main extends Sprite
 
 	public static var fpsVar:FPSCounter;
         
-	public static final PSYCH_ENGINE_VERSION:String = "0.71";
+	public static final PSYCH_ENGINE_VERSION:String = "V1";
 	public static final platform:String = #if mobile "Phones" #else "PCs" #end;
 
 	// You can pretty much ignore everything from here on - your code should go in your states.
