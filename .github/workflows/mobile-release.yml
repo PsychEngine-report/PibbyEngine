@@ -86,9 +86,9 @@ jobs:
       - name: Publish The Release
         uses: softprops/action-gh-release@v2
         with:
-          name: "DevBuild ${{ needs.get-commit-hash.outputs.commit_hash }}"
-          tag_name: "devbuild-${{ needs.get-commit-hash.outputs.commit_hash }}"
-          prerelease: true
+          name: "HOTIFX 0.71 (V${{ needs.get-commit-hash.outputs.commit_hash }})"
+          tag_name: "release-${{ needs.get-commit-hash.outputs.commit_hash }}"
+          lastrelease: true
           files: |
             /home/runner/*.apk
             /home/runner/*.zip
