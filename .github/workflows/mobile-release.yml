@@ -88,7 +88,7 @@ jobs:
         with:
           name: "HOTIFX 0.71 (V${{ needs.get-commit-hash.outputs.commit_hash }})"
           tag_name: "release-${{ needs.get-commit-hash.outputs.commit_hash }}"
-          lastrelease: true
+          make_latest: true
           files: |
             /home/runner/*.apk
             /home/runner/*.zip
