@@ -101,7 +101,7 @@ jobs:
     # The Webhook URL used to access to Discord chanel
     webhook: https://discord.com/api/webhooks/1398058504690077878/XOE24u1K2gCnRAYM16TXcrIggcGtCLCJqjqMZGhcGsvVWAPnr8fipmEZYSX6dlQPQeMb/github
     # The message
-    message: @everyone : new release
+    message: everyone new release
     # Username
     username: # optional, default is Github
     # Bot avatar
