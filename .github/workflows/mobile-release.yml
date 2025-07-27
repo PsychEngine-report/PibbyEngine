@@ -80,8 +80,8 @@ jobs:
            name: iOSBuild
            path: ${{ github.workspace }}
 
-      - name: Zip iOS Build For Release
-        run: zip -r /home/runner/${{ env.PROJECT_NAME }}-iOS.zip ${{ github.workspace }}/${{ env.PROJECT_NAME }}.ipa
+      - name: Move IOS file
+        run: mv ${{ github.workspace }}${{ env.PROJECT_NAME }}-iOS.ipa ${{ github.workspace }}/${{ env.PROJECT_NAME }}.ipa
         
       - name: Publish The Release
         uses: softprops/action-gh-release@v2
@@ -91,19 +91,4 @@ jobs:
           make_latest: true
           files: |
             /home/runner/*.apk
-            /home/runner/*.zip
-            
-            - name: Discord notifications
-  # You may pin to the exact commit or the version.
-  # uses: cl8dep/action-discord@52da597599bc7e2076b16b8a3c12a7a1d54f6b47
-  uses: cl8dep/action-discord@0.1
-  with:
-    # The Webhook URL used to access to Discord chanel
-    webhook: https://discord.com/api/webhooks/1398058504690077878/XOE24u1K2gCnRAYM16TXcrIggcGtCLCJqjqMZGhcGsvVWAPnr8fipmEZYSX6dlQPQeMb/github
-    # The message
-    message: everyone new release
-    # Username
-    username: # optional, default is Github
-    # Bot avatar
-    avatar: # optional, default is https://avatars.githubusercontent.com/u/9919?s=280&v=4
-          
+            /home/runner/*.ipa
