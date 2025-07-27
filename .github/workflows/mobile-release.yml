@@ -81,7 +81,7 @@ jobs:
            path: ${{ github.workspace }}
 
       - name: Move iOS File
-        run: mv ${{ github.workspace }}/${{ env.PROJECT_NAME }}.ipa /home/runner/${{ env.PROJECT_NAME }}HOTFIX 0.71.ipa
+        run: mv ${{ github.workspace }}/${{ env.PROJECT_NAME }}iOS.ipa /home/runner/${{ env.PROJECT_NAME }}.ipa
 
       - name: Publish The Release
         uses: softprops/action-gh-release@v2
