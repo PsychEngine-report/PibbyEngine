@@ -87,7 +87,7 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           name: "HOTIFX 0.71 (V${{ needs.get-gitversion-hash }})"
-          tag_name: "release-${{ needs.get-gitversion-hash }}"
+          tag_name: "release-${{ needs.get-commit-hash.outputs.commit_hash }}"
           make_latest: true
           files: |
             /home/runner/*.apk
