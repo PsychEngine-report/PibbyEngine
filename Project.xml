@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="PibbyEngine" file="PibbyEngine" packageName="com.pibbyapocalypse.pibbyengine" package="com.pibbyapocalypse.pibbyengine" main="Main" version="0.71 HOTIFX (V5.2)" company="PibbyApocalypse" />
+	<app title="PibbyEngine" file="PibbyEngine" packageName="com.pibbyapocalypse.pibbyengine" package="com.pibbyapocalypse.pibbyengine" main="Main" version="0.71 HOTIFX (V5.6)" company="PibbyApocalypse" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
