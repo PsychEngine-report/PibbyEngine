@@ -50,11 +50,11 @@ jobs:
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4.1.7
+      - uses: actions/checkout@v4
 
       - uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 4.3.4
+          haxe-version: 4.3.7
       # Runs a set of commands using the runners shell
       - name: Install Haxelib
         run: |
