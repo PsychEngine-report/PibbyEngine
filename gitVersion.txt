@@ -1,1 +1,1 @@
-HOTIFX : 0.71 (V5)
+HOTIFX : 0.71 v5
