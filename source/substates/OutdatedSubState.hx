@@ -30,12 +30,12 @@ class OutdatedSubState extends MusicBeatSubstate
 		warnText = new FlxText(0, 0, FlxG.width,
 			'Sup bro, looks like you\'re running an outdated version of\nPsych Engine (${MainMenuState.psychEngineVersion})\n
 			-----------------------------------------------\n
-			Press $enter to update to the latest version ${updateVersion}\n
-			Press $back to proceed anyway.\n
-			You can disable this warning by unchecking the
-			"Check for Updates" setting in the Options Menu\n
+			Press $enter to update to the latest version of PibbyEngine : ${updateVersion}\n
+			Press $back to proceed anyway and miss VERY COOL patchs.\n
+			You can disable this warnng in setting but
+			dunno why you would want to disable the check for Uptade\n
 			-----------------------------------------------\n
-			Thank you for using the Engine!',
+			Thank you for using PibbyEngine!',
 			32);
 		warnText.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER);
 		warnText.scrollFactor.set();
@@ -56,7 +56,7 @@ class OutdatedSubState extends MusicBeatSubstate
 		if(!leftState) {
 			if (controls.ACCEPT) {
 				leftState = true;
-				CoolUtil.browserLoad("https://github.com/MobilePorting/FNF-PsychEngine-Mobile/releases");
+				CoolUtil.browserLoad("https://github.com/Ethantobot11/PibbyEngine/releases");
 			}
 			else if(controls.BACK) {
 				leftState = true;
