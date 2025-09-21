@@ -144,8 +144,13 @@ jobs:
           haxelib run lime config ANDROID_SETUP true
 
       - name: Compile
-        run: haxelib run lime build ${{ inputs.buildArgs }}     
+        run: haxelib run lime build ${{ inputs.buildArgs }}  
 
+      - name: Show generated AndroidManifest.xml
+        if: inputs.name == 'Android'
+        run: |
+         echo "=== AndroidManifest.xml ==="
+         cat export/release/android/bin/app/src/main/AndroidManifest.xml || true
       - name: Make IPA
         if: inputs.name == 'iOS'
         run: |
