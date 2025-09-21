@@ -53,8 +53,9 @@ jobs:
         if: inputs.name == 'Android'
         uses: actions/setup-java@v2
         with:
-         distribution: 'temurin'
-         java-version: '17'
+          distribution: 'temurin'
+          java-version: '17'
+          add-to-path: false
 
       - name: Restore existing build cache for faster compilation
         if: inputs.name == 'iOS'
