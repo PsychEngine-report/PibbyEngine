@@ -49,6 +49,13 @@ jobs:
           ndk-version: r27c
           add-to-path: false
 
+      - name: Setup Java JDK
+        if: imputs.name == 'Android'
+        uses: actions/setup-java@v2
+        with:
+         distribution: 'temurin'
+         java-version: '17'
+
       - name: Restore existing build cache for faster compilation
         if: inputs.name == 'iOS'
         uses: actions/cache@v4
