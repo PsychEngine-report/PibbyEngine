@@ -50,7 +50,7 @@ jobs:
           add-to-path: false
 
       - name: Setup Java JDK
-        if: imputs.name == 'Android'
+        if: inputs.name == 'Android'
         uses: actions/setup-java@v2
         with:
          distribution: 'temurin'
