@@ -5,7 +5,7 @@ permissions: write-all   # ✅ caller must allow write perms too
 
 env:
   PROJECT_NAME: PibbyEngine
-  REPO_PATH: Ethantobot11/PibbyEngine
+  REPO_PATH: PsychEngine-Report/PibbyEngine
 
 jobs:
   get-commit-hash:
