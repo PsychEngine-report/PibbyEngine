@@ -97,6 +97,11 @@
 		<assets path="alsoft.txt" rename="plugins/alsoft.conf" type="text" unless="windows"/>
 	</section>
 
+	<section if="TOUCH_CONTROLS">
+		<assets path="mobile/assets"                  rename="assets/mobile"/>
+		<assets path="mobile/assets"                  rename="assets/mobile"/>
+		<assets path="mobile/storageModes.txt"      rename="mobile/storageModes.txt"/>
+	</section>
 	<!-- _______________________________ Libraries ______________________________ -->
 
 	<haxelib name="flixel"/>
@@ -163,6 +168,7 @@
 		<haxedef name="HXCPP_STACK_TRACE" />
 		<haxedef name="HXCPP_CATCH_SEGV" />
 	</section>
+	
 	
 	<!--Disable deprecated warnings-->
 	<haxedef name='no-deprecation-warnings' />
