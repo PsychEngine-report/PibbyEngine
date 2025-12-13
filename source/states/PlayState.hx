@@ -636,7 +636,7 @@ class PlayState extends MusicBeatState
 			}
 		#end
 		
-		addMobilePad();
+		addMobileControl();
 		MobilePad.instance.visible = true;
 		MobilePad.onButtonDown.add(onButtonPress);
 		MobilePad.onButtonUp.add(onButtonRelease);
@@ -2446,7 +2446,7 @@ class PlayState extends MusicBeatState
 	public var transitioning = false;
 	public function endSong()
 	{
-		mobileControls.instance.visible = #if !android touchPad.visible = #end false;
+		hitbox.visible = #if !android mobilePad.visible = #end false;
 		//Should kill you if you tried to cheat
 		if(!startingSong)
 		{
@@ -2871,26 +2871,30 @@ class PlayState extends MusicBeatState
 		return -1;
 	}
 
-	private function onButtonPress(button:TouchButton):Void
+	private function onButtonPress(button:MobileButton, ids:Array<String>, unique:Int):Void
 	{
-		if (button.IDs.filter(id -> id.toString().startsWith("EXTRA")).length > 0)
-			return;
+		if (ids.filter(id -> id.startsWith("NOTE")).length > 0 || ids.filter(id -> id.startsWith(Note.maniaKeys + "K_NOTE")).length > 0)
+		{
+			var buttonCode:Int = (unique == -1 ? 0 : unique);
+			trace(buttonCode);
 
-		var buttonCode:Int = (button.IDs[0].toString().startsWith('NOTE')) ? button.IDs[0] : button.IDs[1];
-		callOnScripts('onButtonPressPre', [buttonCode]);
-		if (button.justPressed) keyPressed(buttonCode);
-		callOnScripts('onButtonPress', [buttonCode]);
+			callOnScripts('onButtonPressPre', [buttonCode]);
+			if (button.justPressed) keyPressed(buttonCode);
+			callOnScripts('onButtonPress', [buttonCode]);
+		}
 	}
 
-	private function onButtonRelease(button:TouchButton):Void
+	private function onButtonRelease(button:MobileButton, ids:Array<String>, unique:Int):Void
 	{
-		if (button.IDs.filter(id -> id.toString().startsWith("EXTRA")).length > 0)
-			return;
+		if (ids.filter(id -> id.startsWith("NOTE")).length > 0 || ids.filter(id -> id.startsWith(Note.maniaKeys + "K_NOTE")).length > 0)
+		{
+			var buttonCode:Int = (unique == -1 ? 0 : unique);
+			trace(buttonCode);
 
-		var buttonCode:Int = (button.IDs[0].toString().startsWith('NOTE')) ? button.IDs[0] : button.IDs[1];
-		callOnScripts('onButtonReleasePre', [buttonCode]);
-		if(buttonCode > -1) keyReleased(buttonCode);
-		callOnScripts('onButtonRelease', [buttonCode]);
+			callOnScripts('onButtonReleasePre', [buttonCode]);
+			if(buttonCode > -1) keyReleased(buttonCode);
+			callOnScripts('onButtonRelease', [buttonCode]);
+		}
 	}
 
 	// Hold notes
@@ -3249,6 +3253,10 @@ class PlayState extends MusicBeatState
 
 		hscriptArray = null;
 		#end
+
+		if (luaMobilePad != null)
+			luaMobilePad = FlxDestroyUtil.destroy(luaMobilePad);
+		
 		stagesFunc(function(stage:BaseStage) stage.destroy());
 
 		#if VIDEOS_ALLOWED
@@ -3724,99 +3732,91 @@ class PlayState extends MusicBeatState
 		return false;
 	}
 
-	public function makeLuaTouchPad(DPadMode:String, ActionMode:String) {
-		if(members.contains(luaTouchPad)) return;
+	public var luaMobilePad:MobilePad;
+	public var luaMpadCam:FlxCamera;
+	public function makeLuaMobilePad(DPad:String, Action:String)
+	{
+		if(members.contains(luaMobilePad)) return;
 
-		if(!variables.exists("luaTouchPad"))
-			variables.set("luaTouchPad", luaTouchPad);
+		if(!variables.exists("luaMobilePad"))
+			variables.set("luaMobilePad", luaMobilePad);
 
-		luaTouchPad = new TouchPad(DPadMode, ActionMode, NONE);
-		luaTouchPad.alpha = ClientPrefs.data.controlsAlpha;
-	}
-	
-	public function addLuaTouchPad() {
-		if(luaTouchPad == null || members.contains(luaTouchPad)) return;
-
-		var target = LuaUtils.getTargetInstance();
-		target.insert(target.members.length + 1, luaTouchPad);
+		luaMobilePad = new MobilePad(DPad, Action);
+		luaMobilePad.alpha = ClientPrefs.data.mobilePadAlpha;
 	}
 
-	public function addLuaTouchPadCamera() {
-		if(luaTouchPad != null)
-			luaTouchPad.cameras = [luaTpadCam];
+	public function addLuaMobilePad() {
+		if(luaMobilePad == null || members.contains(luaMobilePad)) return;
+
+		var target:Dynamic = isDead ? GameOverSubstate.instance : PlayState.instance;
+		target.insert(target.members.length + 1, luaMobilePad);
 	}
 
-	public function removeLuaTouchPad() {
-		if (luaTouchPad != null) {
-			luaTouchPad.kill();
-			luaTouchPad.destroy();
-			remove(luaTouchPad);
-			luaTouchPad = null;
+	public function addLuaMobilePadCamera()
+		if(luaMobilePad != null) luaMobilePad.cameras = [luaMpadCam];
+
+	public function removeLuaMobilePad()
+	{
+		if (luaMobilePad != null) {
+			luaMobilePad.kill();
+			luaMobilePad.destroy();
+			remove(luaMobilePad);
+			luaMobilePad = null;
 		}
 	}
 
-	public function luaTouchPadPressed(button:Dynamic):Bool {
-		if(luaTouchPad != null) {
-			if(Std.isOfType(button, String))
-				return luaTouchPad.buttonPressed(MobileInputID.fromString(button));
-			else if(Std.isOfType(button, Array)){
-				var FUCK:Array<String> = button; // haxe said "You Can't Iterate On A Dyanmic Value Please Specificy Iterator or Iterable *insert nerd emoji*" so that's the only i foud to fix
-				var idArray:Array<MobileInputID> = [];
-				for(strId in FUCK)
-					idArray.push(MobileInputID.fromString(strId));
-				return luaTouchPad.anyPressed(idArray);
-			} else
-				return false;
-		}
+	public static function checkMPadPress(buttonName:String, type = 'justPressed') {
+		var button = PlayState.instance.luaMobilePad.getButtonFromName(buttonName); //Access Spesific Button Name From Array
+		return Reflect.getProperty(button, type);
 		return false;
 	}
 
-	public function luaTouchPadJustPressed(button:Dynamic):Bool {
-		if(luaTouchPad != null) {
-			if(Std.isOfType(button, String))
-				return luaTouchPad.buttonJustPressed(MobileInputID.fromString(button));
-			else if(Std.isOfType(button, Array)){
-				var FUCK:Array<String> = button;
-				var idArray:Array<MobileInputID> = [];
-				for(strId in FUCK)
-					idArray.push(MobileInputID.fromString(strId));
-				return luaTouchPad.anyJustPressed(idArray);
-			} else
-				return false;
-		}
-		return false;
-	}
-	
-	public function luaTouchPadJustReleased(button:Dynamic):Bool {
-		if(luaTouchPad != null) {
-			if(Std.isOfType(button, String))
-				return luaTouchPad.buttonJustReleased(MobileInputID.fromString(button));
-			else if(Std.isOfType(button, Array)){
-				var FUCK:Array<String> = button;
-				var idArray:Array<MobileInputID> = [];
-				for(strId in FUCK)
-					idArray.push(MobileInputID.fromString(strId));
-				return luaTouchPad.anyJustReleased(idArray);
-			} else
-				return false;
-		}
+	//I don't need this anymore because Hitboxes can returnable to any keys
+	public static function checkHBoxPress(button:String, type = 'justPressed') {
+		var buttonObject:MobileButton = null;
+		if (MusicBeatState.getState().hitbox != null) buttonObject = MusicBeatState.getState().hitbox.getButtonFromName(button);
+		if (buttonObject != null) return Reflect.getProperty(buttonObject, type);
 		return false;
 	}
 
-	public function luaTouchPadReleased(button:Dynamic):Bool {
-		if(luaTouchPad != null) {
-			if(Std.isOfType(button, String))
-				return luaTouchPad.buttonJustReleased(MobileInputID.fromString(button));
-			else if(Std.isOfType(button, Array)){
-				var FUCK:Array<String> = button;
-				var idArray:Array<MobileInputID> = [];
-				for(strId in FUCK)
-					idArray.push(MobileInputID.fromString(strId));
-				return luaTouchPad.anyReleased(idArray);
-			} else
-				return false;
+	//Lua Stuff for Mobile Controls
+	public function reloadControls(?mode:String)
+	{
+		hitbox.forEachAlive((button) ->
+		{
+			button.deadZones = [];
+		});
+		removeMobileControls();
+		addMobileControls(mode);
+		hitbox.onButtonDown.add(onButtonPress);
+		hitbox.onButtonUp.add(onButtonRelease);
+		hitbox.forEachAlive((button) ->
+		{
+			if (mobilePad.getButtonFromName('buttonC') != null)
+				button.deadZones.push(mobilePad.getButtonFromName('buttonC'));
+			if (mobilePad.getButtonFromName('buttonP') != null)
+				button.deadZones.push(mobilePad.getButtonFromName('buttonP'));
+		});
+	}
+
+	public function addControls(?mode:String)
+	{
+		addMobileControls(mode);
+		if (replayData == null) {
+			hitbox.onButtonDown.add(onButtonPress);
+			hitbox.onButtonUp.add(onButtonRelease);
+			hitbox.onButtonDown.add((button:MobileButton, ids:Array<String>, unique:Int) -> replayRecorder.recordKeyMobileC(Conductor.songPosition, ids, 0));
+			hitbox.onButtonUp.add((button:MobileButton, ids:Array<String>, unique:Int) -> replayRecorder.recordKeyMobileC(Conductor.songPosition, ids, 1));
 		}
-		return false;
+	}
+
+	public function removeControls()
+	{
+		hitbox.forEachAlive((button) ->
+		{
+			button.deadZones = [];
+		});
+		removeMobileControls();
 	}
 
 	function checkForResync()
