@@ -188,7 +188,7 @@ class StoryMenuState extends MusicBeatState
 		changeWeek();
 		changeDifficulty();
 
-		addTouchPad('LEFT_FULL', 'A_B_X_Y');
+		addMobilePad('FULL', 'A_B_X_Y');
 
 		super.create();
 	}
@@ -197,8 +197,8 @@ class StoryMenuState extends MusicBeatState
 		persistentUpdate = true;
 		changeWeek();
 		super.closeSubState();
-		removeTouchPad();
-		addTouchPad('LEFT_FULL', 'A_B_X_Y');
+		removeMobilePad();
+		addMobilePad('FULL', 'A_B_X_Y');
 	}
 
 	override function update(elapsed:Float)
