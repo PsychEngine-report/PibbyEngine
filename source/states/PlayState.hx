@@ -278,6 +278,19 @@ class PlayState extends MusicBeatState
 
 	override public function create()
 	{
+		//Load Mobile Shit (Makes Testing The Hitboxes Easier)
+		MobileConfig.init('MobileControls', CoolUtil.getSavePath(), 'assets/mobile/',
+			[
+				'MobilePad/DPadModes',
+				'MobilePad/ActionModes',
+				'Hitbox/HitboxModes',
+			], [
+				DPAD,
+				ACTION,
+				HITBOX
+			]
+		);
+		
 		//trace('Playback Rate: ' + playbackRate);
 		_lastLoadedModDirectory = Mods.currentModDirectory;
 		Paths.clearStoredMemory();
@@ -623,10 +636,10 @@ class PlayState extends MusicBeatState
 			}
 		#end
 		
-		addMobileControls();
-		mobileControls.instance.visible = true;
-		mobileControls.onButtonDown.add(onButtonPress);
-		mobileControls.onButtonUp.add(onButtonRelease);
+		addMobilePad();
+		MobilePad.instance.visible = true;
+		MobilePad.onButtonDown.add(onButtonPress);
+		MobilePad.onButtonUp.add(onButtonRelease);
 
 		if(eventNotes.length > 0)
 		{
