@@ -103,10 +103,6 @@ class ModsMenuState extends MusicBeatState
 		var buttonWidth = Std.int(bgList.width);
 		var buttonHeight = 80;
 		var daY = 0;
-		if (controls.mobileC)
-			daY = 70;
-		else
-			daY = 20;
 
 		buttonReload = new MenuButton(buttonX, bgList.y + bgList.height + daY, buttonWidth, buttonHeight, Language.getPhrase('reload_button', 'RELOAD'), reload);
 		add(buttonReload);
@@ -316,10 +312,8 @@ class ModsMenuState extends MusicBeatState
 		bottomText.scrollFactor.set();
 		add(bottomText);
 
-		addTouchPad('UP_DOWN', 'B');
-		touchPad.y -= 215; // so that you can press the buttons.
-		if (controls.mobileC)
-			touchPad.alpha = 0.3;
+		addMobilePad('UP_DOWN', 'B');
+		MobilePad.y -= 215; // so that you can press the buttons.
 		super.create();
 	}
 	
