@@ -17,8 +17,8 @@ class OutdatedSubState extends MusicBeatSubstate
 	override function create()
 	{
 		controls.isInSubstate = true;
-		final enter:String = (controls.mobileC) ? 'A' : 'ENTER';
-		final back:String = (controls.mobileC) ? 'B' : 'BACK';
+		final enter:String = 'A';
+		final back:String = 'B';
 
 		super.create();
 
@@ -43,8 +43,7 @@ class OutdatedSubState extends MusicBeatSubstate
 		warnText.alpha = 0.0;
 		add(warnText);
 
-		addTouchPad("NONE", "A_B");
-		touchPad.alpha = 0;
+		addMobilePad('NONE', 'A_B');
 
 		FlxTween.tween(bg, { alpha: 0.8 }, 0.6, { ease: FlxEase.sineIn });
 		FlxTween.tween(warnText, { alpha: 1.0 }, 0.6, { ease: FlxEase.sineIn });
