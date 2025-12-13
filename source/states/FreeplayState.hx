@@ -196,7 +196,8 @@ class FreeplayState extends MusicBeatState
 		changeSelection();
 		updateTexts();
 
-		addTouchPad('LEFT_FULL', 'A_B_C_X_Y_Z');
+		addMobilePad('FULL', 'A_B_C_X_Y_Z');
+		addMobilePadCamera();
 		super.create();
 	}
 
@@ -205,8 +206,10 @@ class FreeplayState extends MusicBeatState
 		changeSelection(0, false);
 		persistentUpdate = true;
 		super.closeSubState();
-		removeTouchPad();
-		addTouchPad('LEFT_FULL', 'A_B_C_X_Y_Z');
+		mobilePad.visible = true;
+		removeMobilePad();
+		addMobilePad('FULL', 'A_B_C_X_Y_Z');
+		addMobilePadCamera();
 	}
 
 	public function addSong(songName:String, weekNum:Int, songCharacter:String, color:Int)
@@ -250,7 +253,7 @@ class FreeplayState extends MusicBeatState
 			ratingSplit[1] += '0';
 
 		var shiftMult:Int = 1;
-		if((FlxG.keys.pressed.SHIFT || touchPad.buttonZ.pressed) && !player.playingMusic) shiftMult = 3;
+		if((FlxG.keys.pressed.SHIFT || mobilePad.getButtonFromName('buttonZ').pressed) && !player.playingMusic) shiftMult = 3;
 
 		if (!player.playingMusic)
 		{
@@ -334,13 +337,13 @@ class FreeplayState extends MusicBeatState
 			}
 		}
 
-		if((FlxG.keys.justPressed.CONTROL || touchPad.buttonC.justPressed) && !player.playingMusic)
+		if((FlxG.keys.justPressed.CONTROL || mobilePad.getButtonFromName('buttonC').justReleased) && !player.playingMusic)
 		{
 			persistentUpdate = false;
 			openSubState(new GameplayChangersSubstate());
 			removeTouchPad();
 		}
-		else if(FlxG.keys.justPressed.SPACE || touchPad.buttonX.justPressed)
+		else if(FlxG.keys.justPressed.SPACE || mobilePad.getButtonFromName('buttonX').justReleased)
 		{
 			if(instPlaying != curSelected && !player.playingMusic)
 			{
@@ -464,11 +467,11 @@ class FreeplayState extends MusicBeatState
 			DiscordClient.loadModRPC();
 			#end
 		}
-		else if((controls.RESET || touchPad.buttonY.justPressed) && !player.playingMusic)
+		else if((mobilePad.getButtonFromName('buttonR').pressed && !player.playingMusic)
 		{
 			persistentUpdate = false;
 			openSubState(new ResetScoreSubState(songs[curSelected].songName, curDifficulty, songs[curSelected].songCharacter));
-			removeTouchPad();
+			removeMobilePad();
 			FlxG.sound.play(Paths.sound('scrollMenu'));
 		}
 
