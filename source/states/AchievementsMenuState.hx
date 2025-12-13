@@ -122,7 +122,7 @@ class AchievementsMenuState extends MusicBeatState
 		
 		_changeSelection();
 
-		addTouchPad('LEFT_FULL', 'B_C');
+		addMobilePad("FULL", "A_B_C");
 
 		super.create();
 		
