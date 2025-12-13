@@ -38,10 +38,10 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var defaultList:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
-			['Mobile Porting Team'],
-			['HomuHomu833',			'homura',             'Head Porter of Psych Engine and Author of linc_luajit-rewriten',                       'https://youtube.com/@HomuHomu833',		'FFE7C0'],
-			['Karim Akra',			'karim',			'Second Porter of Psych Engine',						'https://youtube.com/@Karim0690',		'FFB4F0'],
-			['Moxie',				'moxie',			'Helper of Psych Engine Mobile',							'https://twitter.com/moxie_specalist',  'F592C4'],
+			['Mobile Porters'],
+			['KralOyuncu 2010x',	 'KralOyuncuV3',	'The Mobile-control are made by them',					'https://youtube.com/@kraloyuncurbx',		'378FC7'],
+			['Pibby Engine Team'],
+			['ethan et mw',	 'dev',	'recode engine a bit and headporter of that shit',							'https://youtube.com/@ethanpater548?si=7_USgfJmjVtei_vx',		'378FC7'],
 			[''],
 			["Psych Engine Team"],
 			["Shadow Mario",		"shadowmario",		"Main Programmer and Head of Psych Engine",					"https://ko-fi.com/shadowmario",	"444444"],
