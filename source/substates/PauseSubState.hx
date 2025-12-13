@@ -141,8 +141,8 @@ class PauseSubState extends MusicBeatSubstate
 		regenMenu();
 		cameras = [FlxG.cameras.list[FlxG.cameras.list.length - 1]];
 
-		addTouchPad(menuItems.contains('Skip Time') ? 'LEFT_FULL' : 'UP_DOWN', 'A');
-		addTouchPadCamera();
+		addMobilePad(menuItems.contains('Skip Time') ? 'FULL' : 'UP_DOWN', 'A_B');
+		addMobilePadCamera();
 
 		super.create();
 	}
@@ -340,10 +340,10 @@ class PauseSubState extends MusicBeatSubstate
 			}
 		}
 
-		if (touchPad == null) //sometimes it dosent add the tpad, hopefully this fixes it
+		if (MobilePad == null) //sometimes it dosent add the tpad, hopefully this fixes it
 		{
-			addTouchPad(PlayState.chartingMode ? 'LEFT_FULL' : 'UP_DOWN', 'A');
-			addTouchPadCamera();
+			addMobilePad(menuItems.contains('Skip Time') ? 'FULL' : 'UP_DOWN', 'A');
+		addMobilePadCamera();
 		}
 	}
 
