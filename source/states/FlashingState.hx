@@ -17,8 +17,8 @@ class FlashingState extends MusicBeatState
 	{
 		super.create();
 
-		final enter:String = (controls.mobileC) ? 'A' : 'ENTER';
-		final back:String = (controls.mobileC) ? 'B' : 'BACK';
+		final enter:String = (controls.mobileControls) ? 'A' : 'ENTER';
+		final back:String = (controls.mobileControls) ? 'B' : 'BACK';
 
 		bg = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		add(bg);
@@ -44,7 +44,7 @@ class FlashingState extends MusicBeatState
 			texts.add(button);
 		}
 
-		addTouchPad("LEFT_RIGHT", "A_B");
+		addMobilePad("LEFT_RIGHT", "A_B");
 		touchPad.alpha = 0;
 
 		FlxTween.tween(texts, {alpha: 1.0}, 0.5, {
