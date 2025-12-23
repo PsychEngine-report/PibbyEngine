@@ -10,7 +10,7 @@ class CoolUtil
 {
 	public static function checkForUpdates(url:String = null):String {
 		if (url == null || url.length == 0)
-			url = "https://raw.githubusercontent.com/Ethantobot11/PibbyEngine/main/gitVersion.txt";
+			url = "https://raw.githubusercontent.com/Ethantobot11/PibbyEngine/new-mobile/gitVersion.txt";
 		var version:String = states.MainMenuState.psychEngineVersion.trim();
 		if(ClientPrefs.data.checkForUpdates) {
 			trace('checking for updates...');
@@ -47,12 +47,7 @@ class CoolUtil
 	inline public static function coolTextFile(path:String):Array<String>
 	{
 		var daList:String = null;
-		#if (sys && MODS_ALLOWED)
-		if(FileSystem.exists(path)) daList = File.getContent(path);
-		#else
-		if(Assets.exists(path)) daList = Assets.getText(path);
-		#end
-		return daList != null ? listFromString(daList) : [];
+		if(FunkinFileSystem.exists(path)) daList = FunkinFileSystem.getText(path);
 	}
 
 	inline public static function colorFromString(color:String):FlxColor
