@@ -141,6 +141,13 @@ class Main extends Sprite
 		}
 		#end
 
+		// check if script exists in any of loaded mods
+			var path:String = Paths.modFolders(defaultPath);
+			if (FunkinFileSystem.exists(path))
+				return path;
+
+			return defaultPath;
+
 		#if LUA_ALLOWED Lua.set_callbacks_function(cpp.Callable.fromStaticFunction(psychlua.CallbackHandler.call)); #end
 		Controls.instance = new Controls();
 		ClientPrefs.loadDefaultKeys();
