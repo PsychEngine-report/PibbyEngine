@@ -150,7 +150,7 @@ class Paths
 	static public function setCurrentLevel(name:String)
 		currentLevel = name.toLowerCase();
 
-	public static function getPath(file:String, ?type:AssetType = TEXT, ?parentfolder:String, ?modsAllowed:Bool = true):String
+	public static function getPath(file:String, ?type:Null<AssetType> = null, ?library:Null<String> = null, ?modsAllowed:Bool = false):String
 	{
 		#if MODS_ALLOWED
 		if(modsAllowed)
@@ -159,7 +159,7 @@ class Paths
 			if (parentfolder != null) customFile = '$parentfolder/$file';
 
 			var modded:String = modFolders(customFile);
-			if(FileSystem.exists(modded)) return modded;
+			if(FunkinFileSystem.exists(modded)) return modded;
 		}
 		#end
 		if(parentfolder == "mobile")
@@ -171,7 +171,7 @@ class Paths
 		if (currentLevel != null && currentLevel != 'shared')
 		{
 			var levelPath = getFolderPath(file, currentLevel);
-			if (OpenFlAssets.exists(levelPath, type))
+			if (FunkinFileSystem.exists(levelPath, type))
 				return levelPath;
 		}
 		return getSharedPath(file);
@@ -205,7 +205,7 @@ class Paths
 	{
 		#if MODS_ALLOWED
 		var file:String = modsVideo(key);
-		if(FileSystem.exists(file)) return file;
+		if(FunkinFileSystem.exists(file)) return file;
 		#end
 		return 'assets/videos/$key.$VIDEO_EXT';
 	}
@@ -249,10 +249,10 @@ class Paths
 		{
 			var file:String = getPath(key, IMAGE, parentFolder, true);
 			#if MODS_ALLOWED
-			if (FileSystem.exists(file))
+			if (FunkinFileSystem.exists(file))
 				bitmap = BitmapData.fromFile(file);
-			else #end if (OpenFlAssets.exists(file, IMAGE))
-				bitmap = OpenFlAssets.getBitmapData(file);
+			else #end if (FunkinFileSystem.exists(file, IMAGE))
+				bitmap = FunkinFileSystem.getBitmapData(file);
 
 			if (bitmap == null)
 			{
@@ -288,11 +288,7 @@ class Paths
 	inline static public function getTextFromFile(key:String, ?ignoreMods:Bool = false):String
 	{
 		var path:String = getPath(key, TEXT, !ignoreMods);
-		#if sys
-		return (FileSystem.exists(path)) ? File.getContent(path) : null;
-		#else
-		return (OpenFlAssets.exists(path, TEXT)) ? Assets.getText(path) : null;
-		#end
+		return FunkinFileSystem.getText(path);
 	}
 
 	inline static public function font(key:String)
@@ -300,7 +296,7 @@ class Paths
 		var folderKey:String = Language.getFileTranslation('fonts/$key');
 		#if MODS_ALLOWED
 		var file:String = modFolders(folderKey);
-		if(FileSystem.exists(file)) return file;
+		if(FunkinFileSystem.exists(file)) return file;
 		#end
 		return 'assets/$folderKey';
 	}
@@ -321,15 +317,15 @@ class Paths
 					return true;
 				#end
 
-			if (FileSystem.exists(mods(Mods.currentModDirectory + '/' + modKey)) || FileSystem.exists(mods(modKey)))
+			if (FunkinFileSystem.exists(mods(Mods.currentModDirectory + '/' + modKey)) || FileSystem.exists(mods(modKey)))
 				return true;
 			#if linux
-			else if (FileSystem.exists(findFile(modKey)))
+			else if (FunkinFileSystem.exists(findFile(modKey)))
 				return true;
 			#end
 		}
 		#end
-		return (OpenFlAssets.exists(getPath(key, type, parentFolder, false)));
+		return (FunkinFileSystem.exists(getPath(key, type, parentFolder, false)));
 	}
 
 	static public function getAtlas(key:String, ?parentFolder:String = null, ?allowGPU:Bool = true):FlxAtlasFrames
@@ -338,7 +334,7 @@ class Paths
 		var imageLoaded:FlxGraphic = image(key, parentFolder, allowGPU);
 
 		var myXml:Dynamic = getPath('images/$key.xml', TEXT, parentFolder, true);
-		if(OpenFlAssets.exists(myXml) #if MODS_ALLOWED || (FileSystem.exists(myXml) && (useMod = true)) #end )
+		if(FunkinFileSystem.exists(myXml) #if MODS_ALLOWED || (FileSystem.exists(myXml) && (useMod = true)) #end )
 		{
 			#if MODS_ALLOWED
 			return FlxAtlasFrames.fromSparrow(imageLoaded, (useMod ? File.getContent(myXml) : myXml));
@@ -388,9 +384,9 @@ class Paths
 		var xmlExists:Bool = false;
 
 		var xml:String = modsXml(key);
-		if(FileSystem.exists(xml)) xmlExists = true;
+		if(FunkinFileSystem.exists(xml)) xmlExists = true;
 
-		return FlxAtlasFrames.fromSparrow(imageLoaded, (xmlExists ? File.getContent(xml) : getPath(Language.getFileTranslation('images/$key') + '.xml', TEXT, parentFolder)));
+		return FlxAtlasFrames.fromSparrow(imageLoaded, (xmlExists ? FunkinFileSystem.getText(xml) : getPath(Language.getFileTranslation('images/$key') + '.xml', TEXT, parentFolder)));
 		#else
 		return FlxAtlasFrames.fromSparrow(imageLoaded, getPath(Language.getFileTranslation('images/$key') + '.xml', TEXT, parentFolder));
 		#end
@@ -405,7 +401,7 @@ class Paths
 		var txt:String = modsTxt(key);
 		if(FileSystem.exists(txt)) txtExists = true;
 
-		return FlxAtlasFrames.fromSpriteSheetPacker(imageLoaded, (txtExists ? File.getContent(txt) : getPath(Language.getFileTranslation('images/$key') + '.txt', TEXT, parentFolder)));
+		return FlxAtlasFrames.fromSpriteSheetPacker(imageLoaded, (txtExists ? FunkinFileSystem.getText(txt) : getPath(Language.getFileTranslation('images/$key') + '.txt', TEXT, parentFolder)));
 		#else
 		return FlxAtlasFrames.fromSpriteSheetPacker(imageLoaded, getPath(Language.getFileTranslation('images/$key') + '.txt', TEXT, parentFolder));
 		#end
@@ -443,10 +439,10 @@ class Paths
 		{
 			#if sys
 			if(FileSystem.exists(file))
-				currentTrackedSounds.set(file, Sound.fromFile(file));
+				currentTrackedSounds.set(file, FunkinFileSystem.getSound(file));
 			#else
-			if(OpenFlAssets.exists(file, SOUND))
-				currentTrackedSounds.set(file, OpenFlAssets.getSound(file));
+			if(FunkinFileSystem.exists(file, SOUND))
+				currentTrackedSounds.set(file, FunkinFileSystem.getSound(file,SOUND));
 			#end
 			else if(beepOnNull)
 			{
@@ -489,7 +485,7 @@ class Paths
 		if(Mods.currentModDirectory != null && Mods.currentModDirectory.length > 0)
 		{
 			var fileToCheck:String = mods(Mods.currentModDirectory + '/' + key);
-			if(FileSystem.exists(fileToCheck))
+			if(FunkinFileSystem.exists(fileToCheck))
 				return fileToCheck;
 			#if linux
 			else
@@ -504,7 +500,7 @@ class Paths
 		for(mod in Mods.getGlobalMods())
 		{
 			var fileToCheck:String = mods(mod + '/' + key);
-			if(FileSystem.exists(fileToCheck))
+			if(FunkinFileSystem.exists(fileToCheck))
 				return fileToCheck;
 			#if linux
 			else
@@ -644,7 +640,7 @@ class Paths
 	public static function readDirectory(directory:String):Array<String>
 	{
 		#if MODS_ALLOWED
-		return FileSystem.readDirectory(directory);
+		return FunkinFileSystem.readDirectory(directory);
 		#else
 		var dirs:Array<String> = [];
 		for(dir in Assets.list().filter(folder -> folder.startsWith(directory)))
