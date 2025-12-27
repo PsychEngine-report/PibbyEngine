@@ -4,6 +4,7 @@ import flixel.FlxSubState;
 
 class MusicBeatSubstate extends FlxSubState
 {
+	public var mobileManager:MobileControlManager;
 	public static var instance:MusicBeatSubstate;
 
 	public function new()
@@ -11,7 +12,9 @@ class MusicBeatSubstate extends FlxSubState
 		instance = this;
 		controls.isInSubstate = true;
 		super();
+		mobileManager = new MobileControlManager(this);
 	}
+		
 
 	private var curSection:Int = 0;
 	private var stepsToDo:Int = 0;
