@@ -23,7 +23,7 @@ class MusicBeatState extends FlxState
 	public function new() {
 		super();
 		mobileManager = new MobileControlManager(this);
-
+	}
 	public var touchPad:TouchPad;
 	public var touchPadCam:FlxCamera;
 	public var mobileControls:IMobileControls;
