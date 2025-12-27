@@ -23,4 +23,5 @@ haxelib git funkin.vis https://github.com/FunkinCrew/funkVis 22b1ce089dd924f15cd
 haxelib git grig.audio https://gitlab.com/haxe-grig/grig.audio.git cbf91e2180fd2e374924fe74844086aab7891666 --quiet
 echo credit :D https://github.com/Prohack101010.
 haxelib git mobile-controls https://github.com/Prohack101010/mobile-controls-dev --quiet
+haxelib git extension-androidtools https://github.com/MAJigsaw77/extension-androidtools --quiet
 echo Finished!
