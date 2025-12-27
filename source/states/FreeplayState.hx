@@ -467,7 +467,7 @@ class FreeplayState extends MusicBeatState
 			DiscordClient.loadModRPC();
 			#end
 		}
-		else if((mobilePad.getButtonFromName('buttonR').pressed && !player.playingMusic)
+		else if((mobilePad.getButtonFromName('buttonR').pressed && !player.playingMusic))
 		{
 			persistentUpdate = false;
 			openSubState(new ResetScoreSubState(songs[curSelected].songName, curDifficulty, songs[curSelected].songCharacter));
