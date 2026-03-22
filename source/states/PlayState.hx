@@ -283,8 +283,6 @@ class PlayState extends MusicBeatState
 	private static var _lastLoadedModDirectory:String = '';
 	public static var nextReloadAll:Bool = false;
 
-	public var luaTouchPad:TouchPad;
-
 	override public function create()
 	{
 		super.create();
@@ -654,11 +652,6 @@ class PlayState extends MusicBeatState
 				#end
 			}
 		#end
-		
-		addMobileControls();
-		mobileControls.instance.visible = true;
-		mobileControls.onButtonDown.add(onButtonPress);
-		mobileControls.onButtonUp.add(onButtonRelease);
 
 		if(eventNotes.length > 0)
 		{
@@ -690,12 +683,6 @@ class PlayState extends MusicBeatState
 		var splash:NoteSplash = new NoteSplash();
 		grpNoteSplashes.add(splash);
 		splash.alpha = 0.000001; //cant make it invisible or it won't allow precaching
-
-		#if !android
-		addTouchPad('NONE', 'P');
-		addTouchPadCamera();
-		#end
-
 		super.create();
 		Paths.clearUnusedMemory();
 
@@ -2486,7 +2473,6 @@ class PlayState extends MusicBeatState
 	public var transitioning = false;
 	public function endSong()
 	{
-		mobileControls.instance.visible = #if !android touchPad.visible = #end false;
 		//Should kill you if you tried to cheat
 		if(!startingSong)
 		{
@@ -2909,28 +2895,6 @@ class PlayState extends MusicBeatState
 			}
 		}
 		return -1;
-	}
-
-	private function onButtonPress(button:TouchButton):Void
-	{
-		if (button.IDs.filter(id -> id.toString().startsWith("EXTRA")).length > 0)
-			return;
-
-		var buttonCode:Int = (button.IDs[0].toString().startsWith('NOTE')) ? button.IDs[0] : button.IDs[1];
-		callOnScripts('onButtonPressPre', [buttonCode]);
-		if (button.justPressed) keyPressed(buttonCode);
-		callOnScripts('onButtonPress', [buttonCode]);
-	}
-
-	private function onButtonRelease(button:TouchButton):Void
-	{
-		if (button.IDs.filter(id -> id.toString().startsWith("EXTRA")).length > 0)
-			return;
-
-		var buttonCode:Int = (button.IDs[0].toString().startsWith('NOTE')) ? button.IDs[0] : button.IDs[1];
-		callOnScripts('onButtonReleasePre', [buttonCode]);
-		if(buttonCode > -1) keyReleased(buttonCode);
-		callOnScripts('onButtonRelease', [buttonCode]);
 	}
 
 	// Hold notes
@@ -3763,101 +3727,6 @@ class PlayState extends MusicBeatState
 		#else
 		FlxG.log.warn('This platform doesn\'t support Runtime Shaders!');
 		#end
-		return false;
-	}
-
-	public function makeLuaTouchPad(DPadMode:String, ActionMode:String) {
-		if(members.contains(luaTouchPad)) return;
-
-		if(!variables.exists("luaTouchPad"))
-			variables.set("luaTouchPad", luaTouchPad);
-
-		luaTouchPad = new TouchPad(DPadMode, ActionMode, NONE);
-		luaTouchPad.alpha = ClientPrefs.data.controlsAlpha;
-	}
-	
-	public function addLuaTouchPad() {
-		if(luaTouchPad == null || members.contains(luaTouchPad)) return;
-
-		var target = LuaUtils.getTargetInstance();
-		target.insert(target.members.length + 1, luaTouchPad);
-	}
-
-	public function addLuaTouchPadCamera() {
-		if(luaTouchPad != null)
-			luaTouchPad.cameras = [luaTpadCam];
-	}
-
-	public function removeLuaTouchPad() {
-		if (luaTouchPad != null) {
-			luaTouchPad.kill();
-			luaTouchPad.destroy();
-			remove(luaTouchPad);
-			luaTouchPad = null;
-		}
-	}
-
-	public function luaTouchPadPressed(button:Dynamic):Bool {
-		if(luaTouchPad != null) {
-			if(Std.isOfType(button, String))
-				return luaTouchPad.buttonPressed(MobileInputID.fromString(button));
-			else if(Std.isOfType(button, Array)){
-				var FUCK:Array<String> = button; // haxe said "You Can't Iterate On A Dyanmic Value Please Specificy Iterator or Iterable *insert nerd emoji*" so that's the only i foud to fix
-				var idArray:Array<MobileInputID> = [];
-				for(strId in FUCK)
-					idArray.push(MobileInputID.fromString(strId));
-				return luaTouchPad.anyPressed(idArray);
-			} else
-				return false;
-		}
-		return false;
-	}
-
-	public function luaTouchPadJustPressed(button:Dynamic):Bool {
-		if(luaTouchPad != null) {
-			if(Std.isOfType(button, String))
-				return luaTouchPad.buttonJustPressed(MobileInputID.fromString(button));
-			else if(Std.isOfType(button, Array)){
-				var FUCK:Array<String> = button;
-				var idArray:Array<MobileInputID> = [];
-				for(strId in FUCK)
-					idArray.push(MobileInputID.fromString(strId));
-				return luaTouchPad.anyJustPressed(idArray);
-			} else
-				return false;
-		}
-		return false;
-	}
-	
-	public function luaTouchPadJustReleased(button:Dynamic):Bool {
-		if(luaTouchPad != null) {
-			if(Std.isOfType(button, String))
-				return luaTouchPad.buttonJustReleased(MobileInputID.fromString(button));
-			else if(Std.isOfType(button, Array)){
-				var FUCK:Array<String> = button;
-				var idArray:Array<MobileInputID> = [];
-				for(strId in FUCK)
-					idArray.push(MobileInputID.fromString(strId));
-				return luaTouchPad.anyJustReleased(idArray);
-			} else
-				return false;
-		}
-		return false;
-	}
-
-	public function luaTouchPadReleased(button:Dynamic):Bool {
-		if(luaTouchPad != null) {
-			if(Std.isOfType(button, String))
-				return luaTouchPad.buttonJustReleased(MobileInputID.fromString(button));
-			else if(Std.isOfType(button, Array)){
-				var FUCK:Array<String> = button;
-				var idArray:Array<MobileInputID> = [];
-				for(strId in FUCK)
-					idArray.push(MobileInputID.fromString(strId));
-				return luaTouchPad.anyReleased(idArray);
-			} else
-				return false;
-		}
 		return false;
 	}
 
