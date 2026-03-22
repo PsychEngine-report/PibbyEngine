@@ -23,6 +23,8 @@ import lime.graphics.Image;
 #if COPYSTATE_ALLOWED
 import states.CopyState;
 #end
+import mobile.MobileConfig;
+import mobile.MobileConfig.ButtonModes;
 import backend.Highscore;
 
 // NATIVE API STUFF, YOU CAN IGNORE THIS AND SCROLL //
@@ -52,6 +54,13 @@ class Main extends Sprite
 
 	public static function main():Void
 	{
+		MobileConfig.init('MobileControls', 'ArkoseLabs/HaxeTale', 'mobile/',
+			[
+				['MobilePad/DPadModes', ButtonModes.DPAD],
+				['MobilePad/ActionModes', ButtonModes.ACTION],
+				['Hitbox/HitboxModes', ButtonModes.HITBOX]
+			]
+		);
 		Lib.current.addChild(new Main());
 		#if cpp
 		cpp.NativeGc.enable(true);
