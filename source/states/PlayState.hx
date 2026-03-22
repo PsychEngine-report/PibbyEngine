@@ -1,5 +1,6 @@
 package states;
 
+import mobile.MobileControlManager;
 import sys.thread.Thread;
 import backend.Highscore;
 import backend.StageData;
@@ -74,6 +75,14 @@ import crowplexus.hscript.Printer;
 **/
 class PlayState extends MusicBeatState
 {
+		public static var instance:PlayState;
+	public var manager:MobileControlManager;
+	public function new() {
+		super();
+		instance = this;
+		/* Manager Setup */
+		manager = new MobileControlManager(this);
+	}
 	public static var STRUM_X = 42;
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
@@ -278,6 +287,29 @@ class PlayState extends MusicBeatState
 
 	override public function create()
 	{
+		super.create();
+
+		/* MobilePad Setup */
+		manager.addMobilePad('Test', 'Test');
+		manager.addMobilePadCamera();
+
+		/* Hitbox Setup */
+		manager.addHitbox('Test');
+		manager.addHitboxCamera();
+
+		/* JoyStick Setup */
+		function onJoystickMove(angle:Float, strength:Float, directionID:Float, directionName:String):Void
+		{
+			trace('angle:$angle');
+			trace('strength:$strength');
+			trace('directionID:$directionID');
+			trace('directionName:$directionName');
+		}
+
+		// manager.addJoyStick(x, y, texture, callback);
+		manager.addJoyStick(0, 0, 'JoyStick/joystick', onJoystickMove); //Example With Texture (NOTE: texture and callback is optional)
+		manager.joyStick.scale.set(0.7, 0.7);
+		manager.addJoyStickCamera();
 		//trace('Playback Rate: ' + playbackRate);
 		_lastLoadedModDirectory = Mods.currentModDirectory;
 		Paths.clearStoredMemory();
@@ -1709,6 +1741,27 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
+		//with using buttonIDs
+		if (manager.mobilePad.justPressed('A')) {
+			trace('hello from A');
+		}
+		//alternative (buttonName special)
+		if (manager.mobilePad.getButton('buttonA').justPressed) {
+			trace('hello from buttonA');
+		}
+
+		//with using buttonIDs
+		if (manager.hitbox.justPressed('up')) {
+			trace('hello from buttonUp');
+		}
+		//alternative (buttonName special)
+		if (manager.hitbox.getButton('buttonUp').justPressed) {
+			trace('hello from buttonUp');
+		}
+
+		if (manager.joyStick.pressed('up')) {
+			trace('hello from joyStick up');
+		}
 		if(!inCutscene && !paused && !freezeCamera) {
 			FlxG.camera.followLerp = 0.04 * cameraSpeed * playbackRate;
 			var idleAnim:Bool = (boyfriend.getAnimationName().startsWith('idle') || boyfriend.getAnimationName().startsWith('danceLeft') || boyfriend.getAnimationName().startsWith('danceRight'));
@@ -3212,6 +3265,8 @@ class PlayState extends MusicBeatState
 	override function destroy() {
 		if (psychlua.CustomSubstate.instance != null)
 		{
+			if (manager != null) manager.destroy();
+			super.destroy();
 			closeSubState();
 			resetSubState();
 		}
