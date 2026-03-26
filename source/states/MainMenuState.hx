@@ -128,7 +128,7 @@ class MainMenuState extends MusicBeatState
 
 		FlxG.camera.follow(camFollow, null, 0.15);
 
-		addMobilePad("UP_DOWN", "A_B_E");
+		mobileManager.addMobilePad("UP_DOWN", "A_B_E");
 	}
 
 	function createMenuItem(name:String, x:Float, y:Float):FlxSprite
