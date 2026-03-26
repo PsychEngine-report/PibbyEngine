@@ -312,8 +312,8 @@ class ModsMenuState extends MusicBeatState
 		bottomText.scrollFactor.set();
 		add(bottomText);
 
-		addMobilePad('UP_DOWN', 'B');
-		MobilePad.y -= 215; // so that you can press the buttons.
+		mobileManager.addMobilePad('UP_DOWN', 'B');
+		mobileManager.y -= 215; // so that you can press the buttons.
 		super.create();
 	}
 	
