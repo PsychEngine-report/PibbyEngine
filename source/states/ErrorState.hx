@@ -32,7 +32,7 @@ class ErrorState extends MusicBeatState
 		errorText.screenCenter();
 		add(errorText);
 		super.create();
-		addMobilePad('NONE', 'A_B');
+		mobileManager.addMobilePad('NONE', 'A_B');
 		addTouchPadCamera();
 	}
 
