@@ -122,7 +122,7 @@ class AchievementsMenuState extends MusicBeatState
 		
 		_changeSelection();
 
-		addMobilePad("FULL", "A_B_C");
+		mobileManager.addMobilePad("FULL", "A_B_C");
 
 		super.create();
 		
@@ -132,8 +132,8 @@ class AchievementsMenuState extends MusicBeatState
 
 	override function closeSubState() {
 		super.closeSubState();
-       	removeMobilePad();
-		addMobilePad("FULL", "A_B_C");
+       	mobileManager.removeMobilePad();
+		mobileManager.addMobilePad("FULL", "A_B_C");
 	}
 
 	function makeAchievement(achievement:String, data:Achievement, unlocked:Bool, mod:String = null)
@@ -206,9 +206,9 @@ class AchievementsMenuState extends MusicBeatState
 				}
 			}
 			
-			if(MusicBeatState.getState().touchPad.buttonC.justPressed || controls.RESET && (options[curSelected].unlocked || options[curSelected].curProgress > 0))
+			if(MusicBeatState.getState().mobileManager.buttonC.justPressed || controls.RESET && (options[curSelected].unlocked || options[curSelected].curProgress > 0))
 			{
-				removeTouchPad();
+				mobileManager.removeMobilePad();
 				openSubState(new ResetAchievementSubstate());
 			}
 		}
