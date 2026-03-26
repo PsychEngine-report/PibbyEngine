@@ -57,8 +57,8 @@ class StoryMenuState extends MusicBeatState
 		DiscordClient.changePresence("In the Menus", null);
 		#end
 
-		final accept:String = (controls.mobileC) ? "A" : "ACCEPT";
-		final reject:String = (controls.mobileC) ? "B" : "BACK";
+		final accept:String = (controls.addMobilePad) ? "A" : "ACCEPT";
+		final reject:String = (controls.addMobilePad) ? "B" : "BACK";
 
 		if(WeekData.weeksList.length < 1)
 		{
@@ -188,7 +188,7 @@ class StoryMenuState extends MusicBeatState
 		changeWeek();
 		changeDifficulty();
 
-		addMobilePad('FULL', 'A_B_X_Y');
+		mobileManager.addMobilePad('FULL', 'A_B_X_Y');
 
 		super.create();
 	}
@@ -197,8 +197,8 @@ class StoryMenuState extends MusicBeatState
 		persistentUpdate = true;
 		changeWeek();
 		super.closeSubState();
-		removeMobilePad();
-		addMobilePad('FULL', 'A_B_X_Y');
+		mobileManager.removeMobilePad();
+		mobileManager.addMobilePad('FULL', 'A_B_X_Y');
 	}
 
 	override function update(elapsed:Float)
@@ -277,7 +277,7 @@ class StoryMenuState extends MusicBeatState
 			{
 				persistentUpdate = false;
 				openSubState(new ResetScoreSubState('', curDifficulty, '', curWeek));
-				removeTouchPad();
+				mobileManager.removeMobilePad();
 				//FlxG.sound.play(Paths.sound('scrollMenu'));
 			}
 			else if (controls.ACCEPT)
