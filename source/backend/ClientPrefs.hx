@@ -8,18 +8,26 @@ import states.TitleState;
 
 // Add a variable here and it will get automatically saved
 @:structInit class SaveVariables {
-	// Mobile and Mobile Controls Releated
-	public var extraButtons:String = "NONE"; // mobile extra button option
-	public var hitboxPos:Bool = true; // hitbox extra button position option
-	public var dynamicColors:Bool = true; // yes cause its cool -Karim
-	public var controlsAlpha:Float = FlxG.onMobile ? 0.6 : 0;
-	public var screensaver:Bool = false;
+	/* Mobile */
 	public var wideScreen:Bool = false;
-	public var hitboxType:String = "Gradient";
-	public var popUpRating:Bool = true;
-	public var vsync:Bool = false;
-	public var gameOverVibration:Bool = false;
-	public var fpsRework:Bool = false;
+	#if android public var storageType:String = "EXTERNAL_DATA"; #end
+
+	/* Mobile Controls */
+	/* Bool Options */
+	public var disableOnlineShaders:Bool = false;
+	public var hitboxHint:Bool = false;
+	public var ogGameControls:Bool = false; //There we go
+
+	/* Int/Float Options */
+	public var extraKeys:Int = 2;
+	public var hitboxAlpha:Float = #if mobile 0.7 #else 0 #end;
+	public var mobilePadAlpha:Float = #if mobile 0.6 #else 0 #end;
+
+	/* String Options */
+	public var hitboxType:String = 'Gradient';
+	public var hitboxLocation:String = 'Bottom';
+	public var hitboxMode:String = 'Normal (New)';
+	public var mobileExtraKeyReturns:Array<String> = ['SHIFT', 'SPACE', 'Q', 'E'];
 	
 	public var downScroll:Bool = false;
 	public var middleScroll:Bool = false;
@@ -139,21 +147,24 @@ class ClientPrefs {
 		'pause'			=> [START],
 		'reset'			=> [BACK]
 	];
-	public static var mobileBinds:Map<String, Array<MobileInputID>> = [
-		'note_up'		=> [NOTE_UP],
-		'note_left'		=> [NOTE_LEFT],
-		'note_down'		=> [NOTE_DOWN],
-		'note_right'	=> [NOTE_RIGHT],
+	//This is only way to make work controls on new psych versions
+	public static var mobileBinds:Map<String, Array<String>> = [
+		// 4K
+		'note_left'		=> ['NOTE_LEFT'],
+		'note_down'	=> ['NOTE_DOWN'],
+		'note_up'		=> ['NOTE_UP'],
+		'note_right'		=> ['NOTE_RIGHT'],
 
-		'ui_up'			=> [UP],
-		'ui_left'		=> [LEFT],
-		'ui_down'		=> [DOWN],
-		'ui_right'		=> [RIGHT],
+		'ui_up'			=> ['UP'],
+		'ui_left'			=> ['LEFT'],
+		'ui_down'		=> ['DOWN'],
+		'ui_right'		=> ['RIGHT'],
 
-		'accept'		=> [A],
-		'back'			=> [B],
-		'pause'			=> [#if android NONE #else P #end],
-		'reset'			=> [NONE]
+		'accept'		=> ['A'],
+		'back'			=> ['B'],
+		'pause'			=> ['P'],
+		'reset'			=> ['NONE'],
+		'taunt'			=> ['T']
 	];
 	public static var defaultKeys:Map<String, Array<FlxKey>> = null;
 	public static var defaultButtons:Map<String, Array<FlxGamepadInputID>> = null;
@@ -176,7 +187,7 @@ class ClientPrefs {
 	{
 		var keyBind:Array<FlxKey> = keyBinds.get(key);
 		var gamepadBind:Array<FlxGamepadInputID> = gamepadBinds.get(key);
-		var mobileBind:Array<MobileInputID> = mobileBinds.get(key);
+		var mobileBind:Array<String> = mobileBinds.get(key);
 		while(keyBind != null && keyBind.contains(NONE)) keyBind.remove(NONE);
 		while(gamepadBind != null && gamepadBind.contains(NONE)) gamepadBind.remove(NONE);
 		while(mobileBind != null && mobileBind.contains(NONE)) mobileBind.remove(NONE);
