@@ -274,8 +274,6 @@ class PlayState extends MusicBeatState
 	private static var _lastLoadedModDirectory:String = '';
 	public static var nextReloadAll:Bool = false;
 
-	public var luaTouchPad:TouchPad;
-
 	override public function create()
 	{
 		//Load Mobile Shit (Makes Testing The Hitboxes Easier)
@@ -636,10 +634,10 @@ class PlayState extends MusicBeatState
 			}
 		#end
 		
-		addMobileControl();
-		MobilePad.instance.visible = true;
-		MobilePad.onButtonDown.add(onButtonPress);
-		MobilePad.onButtonUp.add(onButtonRelease);
+		mobilemanager.addmobileControl();
+		mobileManager.mobilePad.instance.visible = true;
+		mobileManager.mobilePad.onButtonDown.add(onButtonPress);
+		mobileManager.mobilePad.onButtonUp.add(onButtonRelease);
 
 		if(eventNotes.length > 0)
 		{
@@ -3732,92 +3730,126 @@ class PlayState extends MusicBeatState
 		return false;
 	}
 
-	public var luaMobilePad:MobilePad;
-	public var luaMpadCam:FlxCamera;
-	public function makeLuaMobilePad(DPad:String, Action:String)
-	{
-		if(members.contains(luaMobilePad)) return;
-
-		if(!variables.exists("luaMobilePad"))
-			variables.set("luaMobilePad", luaMobilePad);
-
-		luaMobilePad = new MobilePad(DPad, Action);
-		luaMobilePad.alpha = ClientPrefs.data.mobilePadAlpha;
-	}
-
-	public function addLuaMobilePad() {
-		if(luaMobilePad == null || members.contains(luaMobilePad)) return;
-
-		var target:Dynamic = isDead ? GameOverSubstate.instance : PlayState.instance;
-		target.insert(target.members.length + 1, luaMobilePad);
-	}
-
-	public function addLuaMobilePadCamera()
-		if(luaMobilePad != null) luaMobilePad.cameras = [luaMpadCam];
-
-	public function removeLuaMobilePad()
-	{
-		if (luaMobilePad != null) {
-			luaMobilePad.kill();
-			luaMobilePad.destroy();
-			remove(luaMobilePad);
-			luaMobilePad = null;
+	#if TOUCH_CONTROLS
+	public var customManagers:Map<String, Array<Dynamic>> = [];
+	public var lastGettedManager:MobileControlManager;
+	public var lastGettedManagerName:String;
+	public static function checkManager(?managerName:String):MobileControlManager {
+		if (managerName == null || managerName == '') {
+			instance.lastGettedManagerName = 'default';
+			instance.lastGettedManager = MusicBeatState.getState().mobileManager;
 		}
+		else if (instance.lastGettedManagerName != managerName) {
+			instance.lastGettedManagerName = managerName;
+			instance.lastGettedManager = instance.customManagers.get(managerName)[0];
+		}
+		return instance.lastGettedManager;
 	}
 
-	public static function checkMPadPress(buttonName:String, type = 'justPressed') {
-		var button = PlayState.instance.luaMobilePad.getButtonFromName(buttonName); //Access Spesific Button Name From Array
-		return Reflect.getProperty(button, type);
+	public function createNewManager(name:String, keyDetectionAllowed:Bool) {
+		var mobileManagerNew = new MobileControlManager();
+		add(mobileManagerNew);
+		var managerShit:Array<Dynamic> = [mobileManagerNew, keyDetectionAllowed];
+		customManagers.set(name, managerShit);
+		if(!variables.exists(name))
+			variables.set(name, mobileManagerNew);
+		if(!variables.exists(name + '_mobilePad'))
+			variables.set(name + '_mobilePad', mobileManagerNew.mobilePad);
+		if(!variables.exists(name + '_hitbox'))
+			variables.set(name + '_hitbox', mobileManagerNew.hitbox);
+		if(!variables.exists(name + '_joyStick'))
+			variables.set(name + '_joyStick', mobileManagerNew.joyStick);
+	}
+	#end
+
+	public static function checkMPadPress(buttonName:String, type = 'justPressed', ?managerName:String) {
+		#if TOUCH_CONTROLS
+		var manager = checkManager(managerName);
+
+		var button:MobileButton = null;
+		if (manager.mobilePad != null) button = manager.mobilePad.getButton(buttonName);
+		if (button != null) return Reflect.getProperty(button, type);
+		#end
 		return false;
 	}
 
-	//I don't need this anymore because Hitboxes can returnable to any keys
-	public static function checkHBoxPress(button:String, type = 'justPressed') {
+	//for lua shit
+	public static function checkHBoxPress(button:String, type = 'justPressed', ?managerName:String) {
+		#if TOUCH_CONTROLS
+		var manager = checkManager(managerName);
+
 		var buttonObject:MobileButton = null;
-		if (MusicBeatState.getState().hitbox != null) buttonObject = MusicBeatState.getState().hitbox.getButtonFromName(button);
+		if (manager.hitbox != null) buttonObject = manager.hitbox.getButton(button);
 		if (buttonObject != null) return Reflect.getProperty(buttonObject, type);
+		#end
 		return false;
 	}
 
 	//Lua Stuff for Mobile Controls
-	public function reloadControls(?mode:String)
+	public function reloadPlayStateHitbox(?mode:String)
 	{
-		hitbox.forEachAlive((button) ->
-		{
-			button.deadZones = [];
-		});
-		removeMobileControls();
-		addMobileControls(mode);
-		hitbox.onButtonDown.add(onButtonPress);
-		hitbox.onButtonUp.add(onButtonRelease);
-		hitbox.forEachAlive((button) ->
-		{
-			if (mobilePad.getButtonFromName('buttonC') != null)
-				button.deadZones.push(mobilePad.getButtonFromName('buttonC'));
-			if (mobilePad.getButtonFromName('buttonP') != null)
-				button.deadZones.push(mobilePad.getButtonFromName('buttonP'));
-		});
+		removePlayStateHitbox();
+		addPlayStateHitbox(mode);
 	}
 
-	public function addControls(?mode:String)
+	public function addPlayStateHitbox(?mode:String, ?makeInvinsibleFirst:Bool, ?hints:Null<Bool>)
 	{
-		addMobileControls(mode);
-		if (replayData == null) {
-			hitbox.onButtonDown.add(onButtonPress);
-			hitbox.onButtonUp.add(onButtonRelease);
-			hitbox.onButtonDown.add((button:MobileButton, ids:Array<String>, unique:Int) -> replayRecorder.recordKeyMobileC(Conductor.songPosition, ids, 0));
-			hitbox.onButtonUp.add((button:MobileButton, ids:Array<String>, unique:Int) -> replayRecorder.recordKeyMobileC(Conductor.songPosition, ids, 1));
+		#if TOUCH_CONTROLS
+		if (hints == null)
+			hints = ClientPrefs.data.hitboxHint;
+
+		mobileManager.addHitbox(mode, hints);
+		mobileManager.addHitboxCamera();
+		if (replayData == null && !cpuControlled) connectControlToNotes(null, 'hitbox');
+		if (makeInvinsibleFirst) mobileManager.hitbox.visible = false;
+		addHitboxDeadZone(null, ['buttonT', 'buttonC', 'buttonP']);
+		#end
+	}
+
+	public function addHitboxDeadZone(?managerName:String, deadZoneButtons:Array<String>) {
+		#if TOUCH_CONTROLS
+		var manager = checkManager(managerName);
+		manager?.hitbox.forEachAlive((button) ->
+		{
+			for (deadButton in deadZoneButtons) {
+				if (manager.mobilePad?.getButton(deadButton) != null)
+					button.deadZones.push(manager.mobilePad?.getButton(deadButton));
+			}
+		});
+		#end
+	}
+
+	public function connectControlToNotes(?managerName:String, ?control:String) {
+		#if TOUCH_CONTROLS
+		var manager = checkManager(managerName);
+		var currentControl:MobileButton;
+
+		switch(control) {
+			case 'mobilePad':
+				manager.mobilePad?.onButtonDown?.add(onButtonPress);
+				manager.mobilePad?.onButtonUp?.add(onButtonRelease);
+				manager.mobilePad?.onButtonDown?.add((button:MobileButton, ids:Array<String>, unique:Int) -> replayRecorder?.recordKeyMobileC(Conductor?.songPosition, ids, 0));
+				manager.mobilePad?.onButtonUp?.add((button:MobileButton, ids:Array<String>, unique:Int) -> replayRecorder?.recordKeyMobileC(Conductor?.songPosition, ids, 1));
+			case 'hitbox':
+				manager.hitbox?.onButtonDown?.add(onButtonPress);
+				manager.hitbox?.onButtonUp?.add(onButtonRelease);
+				mobileManager.hitbox?.onButtonDown?.add((button:MobileButton, ids:Array<String>, unique:Int) -> replayRecorder?.recordKeyMobileC(Conductor?.songPosition, ids, 0));
+				mobileManager.hitbox?.onButtonUp?.add((button:MobileButton, ids:Array<String>, unique:Int) -> replayRecorder?.recordKeyMobileC(Conductor?.songPosition, ids, 1));
 		}
+		#end
 	}
 
-	public function removeControls()
+	public function removePlayStateHitbox()
 	{
-		hitbox.forEachAlive((button) ->
+		#if TOUCH_CONTROLS
+		mobileManager?.hitbox?.forEachAlive((button) ->
 		{
 			button.deadZones = [];
 		});
-		removeMobileControls();
+		mobileManager?.removeHitbox();
+		#end
 	}
+}
 
 	function checkForResync()
 	{
