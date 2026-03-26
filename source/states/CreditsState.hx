@@ -39,7 +39,7 @@ class CreditsState extends MusicBeatState
 
 		var defaultList:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
 			['Mobile Porters'],
-			['KralOyuncu 2010x',	 'KralOyuncuV3',	'The Mobile-control are made by them',					'https://youtube.com/@kraloyuncurbx',		'378FC7'],
+			['ArkoseLabs',	 'KralOyuncuV3',	'The Mobile-control are made by her',					'https://youtube.com/@arkoselabsofficial?si=jQ3m1a-VFOU8kjS1',		'378FC7'],
 			['Pibby Engine Team'],
 			['ethan et mw',	 'dev',	'recode engine a bit and headporter of that shit',							'https://youtube.com/@ethanpater548?si=7_USgfJmjVtei_vx',		'378FC7'],
 			[''],
@@ -133,7 +133,7 @@ class CreditsState extends MusicBeatState
 		intendedColor = bg.color;
 		changeSelection();
 
-		addMobilePad('UP_DOWN', 'A_B');
+		mobileManager.addMobilePad('UP_DOWN', 'A_B');
 
 		super.create();
 	}
